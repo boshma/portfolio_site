@@ -12,7 +12,7 @@ const TypingText = () => {
     // if paused, do nothing
     if (paused) return;
     const timer = setTimeout(() => {
-      const currentText = textList[idx] || '';
+      const currentText = textList[idx] ?? '';
       if (direction) {
         if (text.length === currentText.length) {
           // start pause, set paused to true
