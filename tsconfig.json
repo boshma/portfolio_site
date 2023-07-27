@@ -16,6 +16,8 @@
     "jsx": "preserve",
     "incremental": true,
     "noUncheckedIndexedAccess": true,
+    "suppressImplicitAnyIndexErrors": true, 
+    "ignoreDeprecations": "5.0",
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
@@ -28,6 +30,6 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs"
-  ],
+, "src/components/Particles.js"  ],
   "exclude": ["node_modules"]
 }

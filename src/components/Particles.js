@@ -8,6 +8,7 @@ import { useCallback, useMemo } from "react";
 
 
 
+
 // tsParticles Repository: https://github.com/matteobruni/tsparticles
 // tsParticles Website: https://particles.js.org/
 const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) => {
@@ -23,42 +24,54 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
         enable: true, // enabling this will make the canvas fill the entire screen, it's enabled by default
         zIndex: 0, // this is the z-index value used when the fullScreen is enabled, it's 0 by default
       },
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true, // enables the click event
-            mode: "push", // adds the particles on click
-          },
-          onHover: {
-            enable: true, // enables the hover event
-            mode: "repulse", // make the particles run away from the cursor
-          },
-        },
-        modes: {
-          push: {
-            quantity: 10, // number of particles to add on click
-          },
-          repulse: {
-            distance: 100, // distance of the particles from the cursor
-          },
-        },
-      },
       particles: {
-        number: { value: 100 },
-        links: {
-          enable: true, // enabling this will make particles linked together
-          distance: 50, // maximum distance for linking the particles
+        number: {
+          value: 50,
+          density: {
+            enable: true,
+            value_area: 500
+          }
         },
-        move: {
-          enable: true, // enabling this will make particles move in the canvas
-          speed: { min: 1, max: 5 }, // using a range in speed value will make particles move in a random speed between min/max values, each particles have its own value, it won't change in time by default
+        color: {
+          value: "#fff"
         },
         opacity: {
-          value: { min: 0.3, max: 0.7 }, // using a different opacity, to have some semitransparent effects
+          value: 1,
+          anim: {
+            enable: true,
+            speed: 8,
+            opacity_min: 0.4,
+            sync: false
+          }
+        },
+      shape: {
+          type: "circle"
         },
         size: {
-          value: { min: 1, max: 6 }, // let's randomize the particles size a bit
+          value: 5,
+          random: true
         },
+        line_linked: {
+          enable: false
+        },
+        move: {
+          enable: true,
+          speed: 3,
+          direction: "right",
+          straight: true
+        },
+      
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: {
+            enable: false
+          },
+          onclick: {
+            enable: false
+          }
+        }
+      }
       },
     };
   }, []);
@@ -71,7 +84,11 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
 
   // setting an id can be useful for identifying the right particles component, this is useful for multiple instances or reusable components
 
-  return <Particles id={props.id} init={particlesInit} options={options} />;
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+return <Particles id={props.id} init={particlesInit} options={options} />;
+
 };
 
 export default ParticlesComponent;
