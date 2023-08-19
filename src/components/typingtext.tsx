@@ -1,6 +1,6 @@
 import { useEffect, useState, FunctionComponent } from "react";
 
-const textList = ['building software', 'horror movies', 'running', 'lifting', 'cats', 'food'];
+const textList = ['building neat things', 'horror movies', 'fitness', 'nature', 'animals', 'food'];
 
 interface TypingTextProps {
   className?: string;
@@ -39,7 +39,7 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
   }, [text, idx, direction, paused]);
 
   return (
-    <h2 className={`text-4xl overflow-hidden border-r-2 border-white whitespace-nowrap animate-blink-caret ${className}`}>
+    <h2 className={`text-4xl leading-normal overflow-visible border-r-2 border-white whitespace-nowrap animate-blink-caret ${className}`}>
       <div className="inline-block">{text}</div>
     </h2>
   );
