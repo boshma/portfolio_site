@@ -45,26 +45,26 @@ const TechSection = () => {
     { icon: "skill-icons:styledcomponents", name: "Styled Components" },
   ];
 
-   return (
+  return (
     <div ref={techSectionRef} id="tech" className="flex flex-wrap mx-52 p-8">
       {techItems.map((item, index) => (
-  <div
-    key={animate ? `animate-${index}` : `static-${index}`} // Changing key will remount the element
-    className={`flex flex-col items-center w-1/4 p-4 border-4 border-gray-400 rounded-lg`}
-  >
-    <div
-      className={`perspective-container ${
-        animate ? `animate-spin delay-${index * 100}ms` : ''
-      }`}
-    >
-      <Icon icon={item.icon} className="w-20 h-20" />
-    </div>
-    <p className="mt-2">{item.name}</p>
-  </div>
-))}
-
+        <div
+          key={animate ? `animate-${index}` : `static-${index}`}
+          className="flex flex-col items-center w-1/4 p-4"
+        >
+          <div
+            className={`perspective-container border-4 border-gray-400 rounded-lg p-4 ${
+              animate ? `animate-spin delay-${index * 100}ms` : ''
+            }`}
+          >
+            <Icon icon={item.icon} className="w-20 h-20" />
+          </div>
+          <p className="mt-2 text-xl font-semibold text-gray-700">{item.name}</p>
+        </div>
+      ))}
     </div>
   );
+  
 };
 
 export default TechSection
