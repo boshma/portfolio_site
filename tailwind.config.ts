@@ -60,7 +60,7 @@ module.exports = {
       keyframes: {
         spin: {
           '0%': { transform: 'rotateY(0deg)' },
-          '100%': { transform: 'rotateY(360deg)' },
+          '100%': { transform: 'rotateY(1440deg)' }, // Rotating 5 times (360*5)
         },
         "accordion-down": {
           from: { height: 0 },
@@ -81,7 +81,7 @@ module.exports = {
         },
       },
       animation: {
-        spin: 'spin 2s linear infinite', 
+        spin: 'spin 2s linear', 
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "blink-caret": "blink-caret 1s infinite",

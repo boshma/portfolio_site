@@ -6,6 +6,11 @@ const TechSection = () => {
   const [animate, setAnimate] = useState(false);
   const techSectionRef = React.useRef<HTMLDivElement | null>(null);
 
+  const handleAnimationEnd = () => {
+    setAnimate(false);
+  };
+
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -53,6 +58,7 @@ const TechSection = () => {
           className="flex flex-col items-center w-1/4 p-4"
         >
           <div
+            onAnimationEnd={handleAnimationEnd} // Added event handler
             className={`perspective-container border-4 border-gray-400 rounded-lg p-4 ${
               animate ? `animate-spin delay-${index * 100}ms` : ''
             }`}
@@ -64,7 +70,6 @@ const TechSection = () => {
       ))}
     </div>
   );
-  
 };
 
-export default TechSection
+export default TechSection;
