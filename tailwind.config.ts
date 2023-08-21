@@ -60,7 +60,7 @@ module.exports = {
       keyframes: {
         spin: {
           '0%': { transform: 'rotateY(0deg)' },
-          '100%': { transform: 'rotateY(1440deg)' }, // Rotating 5 times (360*5)
+          '100%': { transform: 'rotateY(1800deg)' }, // Rotating 5 times (360*5)
         },
         "accordion-down": {
           from: { height: 0 },
@@ -81,18 +81,18 @@ module.exports = {
         },
       },
       animationDelay: {
-        '100': '100ms',
-        '200': '200ms',
-        '300': '300ms',
-        '400': '400ms',
-        '500': '500ms',
-        '600': '600ms',
-        '700': '700ms',
-        '800': '800ms',
-        // ...add more delays as needed
+        '180': '180ms',
+        '360': '360ms',
+        '540': '540ms',
+        '720': '720ms',
+        '900': '900ms',
+        '1080': '1080ms',
+        '1260': '1260ms',
+        '1440': '1440ms',
+        // ...
       },
       animation: {
-        spin: 'spin 2s linear', 
+        spin: 'spin 1.5s linear', 
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "blink-caret": "blink-caret 1s infinite",

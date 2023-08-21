@@ -61,7 +61,7 @@ const TechSection = () => {
               animate ? `animate-spin delay-${(index % techItems.length) * 100}` : ''
             }`}
             // Add the corresponding delay class based on the index
-            style={{ animationDelay: `${index * 100}ms` }}
+            style={{ animationDelay: `${index * 180}ms` }}
           >
             <Icon icon={item.icon} className="w-20 h-20" />
           </div>
