@@ -15,7 +15,7 @@ const TechSection = () => {
   ];
 
   return (
-    <div id="tech" className="flex flex-wrap space-x-0 p-8">
+    <div id="tech" className="flex flex-wrap mx-52 p-8">
       {techItems.map((item, index) => (
         <div key={index} className="flex flex-col items-center w-1/4 p-4">
           <Icon icon={item.icon} className="w-20 h-20" /> 
@@ -27,4 +27,3 @@ const TechSection = () => {
 };
 
 export default TechSection;
-
