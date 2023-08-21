@@ -80,6 +80,17 @@ module.exports = {
           '50%': { borderColor: 'white' }
         },
       },
+      animationDelay: {
+        '100': '100ms',
+        '200': '200ms',
+        '300': '300ms',
+        '400': '400ms',
+        '500': '500ms',
+        '600': '600ms',
+        '700': '700ms',
+        '800': '800ms',
+        // ...add more delays as needed
+      },
       animation: {
         spin: 'spin 2s linear', 
         "accordion-down": "accordion-down 0.2s ease-out",

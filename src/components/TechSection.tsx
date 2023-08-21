@@ -60,7 +60,7 @@ const TechSection = () => {
           <div
             onAnimationEnd={handleAnimationEnd} // Added event handler
             className={`perspective-container border-4 border-gray-400 rounded-lg p-4 ${
-              animate ? `animate-spin delay-${index * 100}ms` : ''
+              animate ? `animate-spin delay-${index * 100}` : ''
             }`}
           >
             <Icon icon={item.icon} className="w-20 h-20" />
