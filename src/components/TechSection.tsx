@@ -36,7 +36,7 @@ const TechSection = () => {
         observer.unobserve(techSectionRef.current);
       }
     };
-  }, []); // Include animate in the dependency array
+  }, []);
 
   const techItems = [
     { icon: "logos:react", name: "React" },
@@ -48,7 +48,6 @@ const TechSection = () => {
     { icon: "logos:typescript-icon", name: "TypeScript" },
     { icon: "skill-icons:styledcomponents", name: "Styled Components" },
   ];
-
   return (
     <div ref={techSectionRef} id="tech" className="flex flex-wrap mx-52 p-8">
       {techItems.map((item, index) => (
@@ -57,11 +56,12 @@ const TechSection = () => {
           className="flex flex-col items-center w-1/4 p-4"
         >
           <div
-            onAnimationEnd={handleAnimationEnd}
-            style={{
-              animation: animate ? `spin 2s linear ${index * 100}ms forwards` : undefined,
-            }}
-            className="perspective-container border-4 border-gray-400 rounded-lg p-4"
+            onAnimationEnd={handleAnimationEnd} // Keep existing event handler
+            className={`perspective-container border-4 border-gray-400 rounded-lg p-4 ${
+              animate ? `animate-spin delay-${(index % techItems.length) * 100}` : ''
+            }`}
+            // Add the corresponding delay class based on the index
+            style={{ animationDelay: `${index * 100}ms` }}
           >
             <Icon icon={item.icon} className="w-20 h-20" />
           </div>
