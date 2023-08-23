@@ -42,34 +42,34 @@ const TechSection = () => {
     { icon: "logos:react", name: "React" },
     { icon: "vscode-icons:file-type-light-prisma", name: "Prisma" },
     { icon: "logos:trpc", name: "tRPC" },
-    { icon: "devicon:tailwindcss", name: "Tailwind CSS" },
+    { icon: "devicon:tailwindcss", name: "Tailwind" },
     { icon: "logos:planetscale", name: "PlanetScale" },
     { icon: "logos:nextjs-icon", name: "Next.js" },
     { icon: "logos:typescript-icon", name: "TypeScript" },
-    { icon: "skill-icons:styledcomponents", name: "Styled Components" },
+    { icon: "skill-icons:styledcomponents", name: "Styled-Components" },
   ];
   return (
     <div ref={techSectionRef} id="tech" className="flex flex-wrap mx-52 p-8">
       {techItems.map((item, index) => (
-        <div
-          key={index}
-          className="flex flex-col items-center w-1/4 p-4"
-        >
+        <div key={index} className="flex flex-col items-center w-full sm:w-1/2 md:w-1/4 p-4">
           <div
-            onAnimationEnd={handleAnimationEnd} // Keep existing event handler
-            className={`perspective-container border-4 border-gray-400 rounded-lg p-4 ${
+            onAnimationEnd={handleAnimationEnd}
+            className={`perspective-container border-4 border-gray-400 rounded-lg p-4 flex justify-center items-center ${
               animate ? `animate-spin delay-${(index % techItems.length) * 100}` : ''
             }`}
-            // Add the corresponding delay class based on the index
-            style={{ animationDelay: `${index * 180}ms` }}
+            style={{ animationDelay: `${index * 180}ms`, height: '80px', width: '80px' }}
           >
             <Icon icon={item.icon} className="w-20 h-20" />
           </div>
-          <p className="mt-2 text-xl font-semibold text-gray-700">{item.name}</p>
+          <p className="mt-2 text-xl font-semibold text-gray-700 text-center leading-snug h-[50px]">{item.name}</p> 
         </div>
       ))}
     </div>
   );
+  
+  
+  
+  
 };
 
 export default TechSection;
