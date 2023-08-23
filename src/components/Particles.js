@@ -90,6 +90,7 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
 return <Particles
 id={props.id}
 init={particlesInit}
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 options={options}
 style={{ position: "absolute", width: "100%", height: "100%" }}
