@@ -87,7 +87,13 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-return <Particles id={props.id} init={particlesInit} options={options} />;
+return <Particles
+id={props.id}
+init={particlesInit}
+// @ts-ignore
+options={options}
+style={{ position: "absolute", width: "100%", height: "100%" }}
+/>;
 
 };
 
