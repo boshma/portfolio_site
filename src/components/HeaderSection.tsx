@@ -11,17 +11,16 @@ const HeaderSection = () => {
       </div>
       <div className="absolute z-20 flex flex-col items-center justify-center h-screen w-full">
         <div className="text-5xl leading-normal text-center mb-8 leading-loose">
-          <p>Hey, I'm Bogdan</p>
+          <p>Hey, I&apos;m Bogdan</p>
         </div>
         <div className="text-3xl leading-normal mb-8 leading-loose -mt-8">
-         <p>I'm a full-stack web developer</p>
+         <p>I&apos;m a full-stack web developer</p>
          </div>
         <div className="flex items-center">
           <h2 className="text-4xl mr-2">I</h2>
           <HeartSVG className="h-10 w-10 mr-2" />
           <TypingText className="z-10" />
         </div>
-        
       </div>
     </main>
   );
