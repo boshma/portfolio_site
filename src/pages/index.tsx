@@ -27,7 +27,7 @@ const Home = () => {
         <link rel="icon" href="" />
       </Head>
 
-      <HeaderSection /> {/* Use the HeaderSection component */}
+      <HeaderSection/> {/* Use the HeaderSection component */}
       
       <div id="tech">
         <TechSection />

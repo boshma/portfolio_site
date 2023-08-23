@@ -21,7 +21,7 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
       //   color: "#000", // this sets a background color for the canvas
       // },
       fullScreen: {
-        enable: true, // enabling this will make the canvas fill the entire screen, it's enabled by default
+        enable: false, // enabling this will make the canvas fill the entire screen, it's enabled by default
         zIndex: 0, // this is the z-index value used when the fullScreen is enabled, it's 0 by default
       },
       particles: {
