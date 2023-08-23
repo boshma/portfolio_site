@@ -1,11 +1,9 @@
 // src/pages/index.tsx
 import Head from 'next/head';
-import TypingText from '~/components/typingtext';
-import HeartSVG from '~/components/heartSVG';
-import Particles from '~/components/Particles';
 import NavBar from '~/components/NavBar';
 import { useEffect, useState } from 'react';
 import TechSection from '~/components/TechSection';
+import HeaderSection from '~/components/HeaderSection'; // Import the HeaderSection component
 
 const Home = () => {
   const [navBottom, setNavBottom] = useState(true);
@@ -29,17 +27,8 @@ const Home = () => {
         <link rel="icon" href="" />
       </Head>
 
-      <main className="flex justify-center items-center h-screen bg-gray-900 text-white relative overflow-hidden particle-section">
-        <div className="absolute w-full h-full">
-          <Particles id="tsparticles" />
-        </div>
-        <div className="flex items-center z-10">
-          <h2 className="text-4xl mr-2">I</h2>
-          <HeartSVG className="h-10 w-10 mr-2" />
-        </div>
-        <TypingText className="z-10" />
-
-      </main>
+      <HeaderSection /> {/* Use the HeaderSection component */}
+      
       <div id="tech">
         <TechSection />
       </div>
