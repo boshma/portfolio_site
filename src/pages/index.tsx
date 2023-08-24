@@ -3,7 +3,7 @@ import Head from 'next/head';
 import NavBar from '~/components/NavBar';
 import { useEffect, useState } from 'react';
 import TechSection from '~/components/TechSection';
-import HeaderSection from '~/components/HeaderSection'; // Import the HeaderSection component
+import HeaderSection from '~/components/HeaderSection'; 
 
 const Home = () => {
   const [navBottom, setNavBottom] = useState(true);
@@ -27,10 +27,11 @@ const Home = () => {
         <link rel="icon" href="" />
       </Head>
 
-      <HeaderSection/> {/* Use the HeaderSection component */}
-      
+      <HeaderSection/> 
+      <div className="bg-gradient-to-r from-current via-blue-100 to-current">
       <div id="tech">
         <TechSection />
+      </div>
       </div>
     </>
   );
