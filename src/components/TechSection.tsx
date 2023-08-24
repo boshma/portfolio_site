@@ -54,12 +54,12 @@ const TechSection = () => {
         <div key={index} className="flex flex-col items-center w-full sm:w-1/2 md:w-1/4 p-4">
           <div
             onAnimationEnd={handleAnimationEnd}
-            className={`perspective-container border-4 border-gray-400 rounded-lg p-4 flex justify-center items-center ${
+            className={`perspective-container border-16 border-gray-400 rounded-lg p-8 flex justify-center items-center ${
               animate ? `animate-spin delay-${(index % techItems.length) * 100}` : ''
             }`}
-            style={{ animationDelay: `${index * 180}ms`, height: '80px', width: '80px' }}
+            style={{ animationDelay: `${index * 180}ms`, height: '160px', width: '160px' }} // 4x the original size
           >
-            <Icon icon={item.icon} className="w-20 h-20" />
+            <Icon icon={item.icon} className="w-40 h-40" /> {/* 4x the original size */}
           </div>
           <p className="mt-2 text-xl font-semibold text-gray-700 text-center leading-snug h-[50px]">{item.name}</p> 
         </div>
