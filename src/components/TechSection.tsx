@@ -62,7 +62,7 @@ const TechSection = () => {
           >
             <Icon icon={item.icon} className="w-40 h-40" /> {/* 4x the original size */}
           </div>
-          <p className="mt-2 text-xl font-semibold text-gray-700 text-center leading-snug h-[50px]">{item.name}</p> 
+          <p className="mt-2 text-xl font-semibold text-blue-100 text-center leading-snug h-[50px]">{item.name}</p> 
         </div>
       ))}
     </div>

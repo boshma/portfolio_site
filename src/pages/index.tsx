@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react';
 import TechSection from '~/components/TechSection';
 import HeaderSection from '~/components/HeaderSection'; 
 import ExperienceSection from '~/components/ExperienceSection';
+import ShowcaseSection from '~/components/ShowcaseSection';
+import ContactSection from '~/components/ContactSection';
 
 
 const Home = () => {
@@ -38,6 +40,12 @@ const Home = () => {
       <div id="experience">
       <ExperienceSection />
       </div>
+      <div id="showcase"> 
+          <ShowcaseSection />
+        </div>
+        <div id="contact">
+          <ContactSection />
+        </div>
       </div>
     </>
   );
