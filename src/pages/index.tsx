@@ -4,6 +4,8 @@ import NavBar from '~/components/NavBar';
 import { useEffect, useState } from 'react';
 import TechSection from '~/components/TechSection';
 import HeaderSection from '~/components/HeaderSection'; 
+import ExperienceSection from '~/components/ExperienceSection';
+
 
 const Home = () => {
   const [navBottom, setNavBottom] = useState(true);
@@ -32,6 +34,9 @@ const Home = () => {
       <div className="bg-gradient-to-r from-current via-blue-100 to-current">
       <div id="tech">
         <TechSection />
+      </div>
+      <div id="experience">
+      <ExperienceSection />
       </div>
       </div>
     </>
