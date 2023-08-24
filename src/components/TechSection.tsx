@@ -50,6 +50,7 @@ const TechSection = () => {
   ];
   return (
     <div ref={techSectionRef} id="tech" className="flex flex-wrap mx-52 p-8">
+      <h2 className="w-full text-4xl font-bold text-center text-blue-600 mb-8 italic tracking-widest">My fav tech</h2>
       {techItems.map((item, index) => (
         <div key={index} className="flex flex-col items-center w-full sm:w-1/2 md:w-1/4 p-4">
           <div
@@ -66,8 +67,6 @@ const TechSection = () => {
       ))}
     </div>
   );
-  
-  
   
   
 };
