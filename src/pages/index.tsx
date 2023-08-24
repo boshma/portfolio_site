@@ -28,6 +28,7 @@ const Home = () => {
       </Head>
 
       <HeaderSection/> 
+      <div className="h-1 bg-white"></div>
       <div className="bg-gradient-to-r from-current via-blue-100 to-current">
       <div id="tech">
         <TechSection />
