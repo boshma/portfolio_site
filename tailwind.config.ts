@@ -7,7 +7,7 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   theme: {
     container: {
       center: true,
@@ -58,9 +58,13 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        fadein: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
         spin: {
           '0%': { transform: 'rotateY(0deg)' },
-          '10%': { transform: 'rotateY(180deg)' }, 
+          '10%': { transform: 'rotateY(180deg)' },
           '20%': { transform: 'rotateY(360deg)' },
         },
         "accordion-down": {
@@ -93,7 +97,9 @@ module.exports = {
         // ...
       },
       animation: {
-        spin: 'spin 2s linear', 
+        'fadein-spin': 'fadein 0.5s ease-in forwards, spin 2s linear 0.5s forwards',
+        'fadeout': 'fadeout 0.5s ease-out',
+        spin: 'spin 2s linear',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "blink-caret": "blink-caret 1s infinite",

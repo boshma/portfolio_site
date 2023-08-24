@@ -4,11 +4,8 @@ import React, { useEffect, useState } from 'react';
 
 const TechSection = () => {
   const [animate, setAnimate] = useState(false);
+  const [isInView, setIsInView] = useState(false);
   const techSectionRef = React.useRef<HTMLDivElement | null>(null);
-
-  const handleAnimationEnd = () => {
-    setAnimate(false);
-  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -16,8 +13,9 @@ const TechSection = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !animate) {
             setAnimate(true);
-          } else if (!entry.isIntersecting && animate) {
-            setAnimate(false);
+            setIsInView(true);
+          } else if (!entry.isIntersecting) {
+            setIsInView(false);
           }
         });
       },
@@ -37,7 +35,6 @@ const TechSection = () => {
       }
     };
   }, []);
-
   const techItems = [
     { icon: "logos:react", name: "React" },
     { icon: "vscode-icons:file-type-light-prisma", name: "Prisma" },
@@ -54,21 +51,17 @@ const TechSection = () => {
       {techItems.map((item, index) => (
         <div key={index} className="flex flex-col items-center w-full sm:w-1/2 md:w-1/4 p-4">
           <div
-            onAnimationEnd={handleAnimationEnd}
-            className={`perspective-container border-16 border-gray-400 rounded-lg p-8 flex justify-center items-center ${
-              animate ? `animate-spin delay-${(index % techItems.length) * 100}` : ''
-            }`}
+            className={`opacity-0 perspective-container border-16 border-gray-400 rounded-lg p-8 flex justify-center items-center ${animate ? `animate-fadein-spin delay-${(index % techItems.length) * 100}` : ''} ${!isInView ? 'animate-fadeout' : ''
+              }`}
             style={{ animationDelay: `${index * 180}ms`, height: '160px', width: '160px' }} // 4x the original size
           >
             <Icon icon={item.icon} className="w-40 h-40" /> {/* 4x the original size */}
           </div>
-          <p className="mt-2 text-xl font-semibold text-blue-100 text-center leading-snug h-[50px]">{item.name}</p> 
+          <p className="mt-2 text-xl font-semibold text-blue-100 text-center leading-snug h-[50px]">{item.name}</p>
         </div>
       ))}
     </div>
   );
-  
-  
 };
 
 export default TechSection;
