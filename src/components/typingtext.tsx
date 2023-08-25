@@ -1,4 +1,6 @@
-import { useEffect, useState, FunctionComponent } from "react";
+//src/components/typingtext.tsx
+import React, { useEffect, useState } from "react";
+import type { FunctionComponent } from "react";
 
 const textList = ['building neat things', 'horror movies', 'fitness', 'nature', 'animals', 'food'];
 
@@ -16,7 +18,6 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
     void element.offsetHeight;
   }
 
-
   useEffect(() => {
     if (paused) return;
     const timer = setTimeout(() => {
@@ -27,7 +28,8 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
           setTimeout(() => {
             setDirection(false);
             setPaused(false);
-            forceReflow(document.getElementById('typing-text') as HTMLElement);
+            // Using the non-null assertion operator
+            forceReflow(document.getElementById('typing-text')!);
           }, 1000);
         } else {
           setText((prevText) => prevText + currentText[text.length]);
@@ -36,7 +38,8 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
         if (text.length === 0) {
           setDirection(true);
           setIdx((prevIdx) => (prevIdx + 1) % textList.length);
-          forceReflow(document.getElementById('typing-text') as HTMLElement);
+          // Using the non-null assertion operator
+          forceReflow(document.getElementById('typing-text')!);
         } else {
           setText((prevText) => prevText.slice(0, prevText.length - 1));
         }
@@ -50,7 +53,6 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
       <div id="typing-text" className="inline-block">{text}</div>
     </h2>
   );
-  
 };
 
 export default TypingText;
