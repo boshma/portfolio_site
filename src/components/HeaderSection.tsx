@@ -10,15 +10,15 @@ const HeaderSection = () => {
         <Particles id="tsparticles" />
       </div>
       <div className="absolute z-20 flex flex-col items-center justify-center h-screen w-full">
-        <div className="text-5xl leading-normal text-center mb-8 leading-loose">
+        <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-normal text-center mb-8 leading-loose">
           <p>Hey, I&apos;m Bogdan</p>
         </div>
-        <div className="text-3xl leading-normal mb-8 leading-loose -mt-8">
+        <div className="text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl leading-normal mb-8 leading-loose -mt-8">
          <p>I&apos;m a full-stack web developer</p>
          </div>
         <div className="flex items-center">
-          <h2 className="text-4xl mr-2">I</h2>
-          <HeartSVG className="h-10 w-10 mr-2" />
+          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl mr-2">I</h2>
+          <HeartSVG className="h-6 sm:h-8 md:h-10 lg:h-10 xl:h-10 2xl:h-12 w-6 sm:w-8 md:w-10 lg:w-10 xl:w-10 2xl:w-12 mr-2" />
           <TypingText className="z-10" />
         </div>
       </div>
