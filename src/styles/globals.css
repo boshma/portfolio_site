@@ -18,6 +18,10 @@
   .caret-transparent {
     caret-color: transparent;
   }
+
+  .typing-text {
+    font-family: 'Courier New', monospace;
+  }
   
   :root {
     --background: 0 0% 100%;
