@@ -25,7 +25,7 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
           setTimeout(() => {
             setDirection(false);
             setPaused(false);
-          }, 1000);
+          }, 1500);
         } else {
           setText((prevText) => prevText + currentText[text.length]);
         }
