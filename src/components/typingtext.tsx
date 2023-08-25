@@ -14,9 +14,6 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
   const [direction, setDirection] = useState(true);
   const [paused, setPaused] = useState(false);
 
-  function forceReflow(element: HTMLElement) {
-    void element.offsetHeight;
-  }
 
   useEffect(() => {
     if (paused) return;
@@ -28,8 +25,6 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
           setTimeout(() => {
             setDirection(false);
             setPaused(false);
-            // Using the non-null assertion operator
-            forceReflow(document.getElementById('typing-text')!);
           }, 1000);
         } else {
           setText((prevText) => prevText + currentText[text.length]);
@@ -38,8 +33,6 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
         if (text.length === 0) {
           setDirection(true);
           setIdx((prevIdx) => (prevIdx + 1) % textList.length);
-          // Using the non-null assertion operator
-          forceReflow(document.getElementById('typing-text')!);
         } else {
           setText((prevText) => prevText.slice(0, prevText.length - 1));
         }
@@ -50,7 +43,7 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
 
   return (
     <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-5xl leading-normal overflow-visible border-r-2 border-white whitespace-nowrap animate-blink-caret ${className}`}>
-      <div id="typing-text" className="inline-block">{text}</div>
+      <div className="inline-block">{text}</div>
     </h2>
   );
 };
