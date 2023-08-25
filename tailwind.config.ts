@@ -83,7 +83,6 @@ module.exports = {
         'blink-caret': {
           '0%, 100%': { borderColor: 'transparent' },
           '50%': { borderColor: 'white' },
-          '100%': { borderColor: 'transparent' }
         },
       },
       animationDelay: {
