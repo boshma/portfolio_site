@@ -8,7 +8,6 @@ import ExperienceSection from '~/components/ExperienceSection';
 import ShowcaseSection from '~/components/ShowcaseSection';
 import ContactSection from '~/components/ContactSection';
 
-
 const Home = () => {
   const [navBottom, setNavBottom] = useState(true);
 
@@ -27,6 +26,7 @@ const Home = () => {
       <NavBar navBottom={navBottom} />
       <Head>
         <title>Welcome | Bogdan Shmat - Software Engineer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> {/* Added viewport meta tag */}
         <meta name="description" content="Bogdan Shmat - Software Engineer. A full-stack developer with experience in Next.js, TypeScript, and Tailwind CSS." />
         <link rel="icon" href="" />
       </Head>
