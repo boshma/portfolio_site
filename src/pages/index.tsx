@@ -3,7 +3,7 @@ import Head from 'next/head';
 import NavBar from '~/components/NavBar';
 import { useEffect, useState } from 'react';
 import TechSection from '~/components/TechSection';
-import HeaderSection from '~/components/HeaderSection'; 
+import HeaderSection from '~/components/HeaderSection';
 import ExperienceSection from '~/components/ExperienceSection';
 import ShowcaseSection from '~/components/ShowcaseSection';
 import ContactSection from '~/components/ContactSection';
@@ -31,16 +31,16 @@ const Home = () => {
         <link rel="icon" href="" />
       </Head>
 
-      <HeaderSection/> 
+      <HeaderSection />
       <div className="h-1 bg-white"></div>
       <div className="bg-gradient-to-r from-current via-blue-100 to-current">
-      <div id="tech">
-        <TechSection />
-      </div>
-      <div id="experience">
-      <ExperienceSection />
-      </div>
-      <div id="showcase"> 
+        <div id="tech">
+          <TechSection />
+        </div>
+        <div id="experience">
+          <ExperienceSection />
+        </div>
+        <div id="showcase">
           <ShowcaseSection />
         </div>
         <div id="contact">
