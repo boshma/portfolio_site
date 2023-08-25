@@ -16,17 +16,18 @@ const ExperienceSection = () => {
     "Book: The Inheritance Cycle"
   ];
 
+ 
   return (
     <div id="experience" className="container mx-auto text-center py-8">
       <h2 className="text-4xl font-bold text-blue-600 mb-8 italic tracking-widest">Experience</h2>
       <div className="flex flex-wrap justify-center">
         {sections.map((section, index) => (
-          <div key={index} className="w-1/3 p-4">
+          <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-4">
             <h3 className="text-2xl text-blue-400 font-semibold mb-4">{section.title}</h3>
             <p className="text-2xl border rounded shadow-lg max-w-sm mx-auto p-4">{section.text}</p>
           </div>
         ))}
-        <div className="w-1/3 p-4">
+        <div className="w-full sm:w-1/2 lg:w-1/3 p-4">
           <h3 className="text-2xl text-blue-400 font-semibold mb-4">Fav things</h3>
           <div className="text-2xl border rounded shadow-lg max-w-sm mx-auto p-4">
             <ul>
