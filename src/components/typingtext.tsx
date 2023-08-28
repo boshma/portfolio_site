@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import type { FunctionComponent } from "react";
 
-const textList = ['designing and building', 'horror movies', 'basketball', 'scenic views', 'ragdolls'];
+const textList = ['designing and building', 'horror movies', 'basketball', 'scenic views', 'ragdolls/tuxedos'];
 
 interface TypingTextProps {
   className?: string;
