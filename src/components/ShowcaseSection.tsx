@@ -31,7 +31,7 @@ const ShowcaseSection = () => {
         </div>
       </div>
       <p className="text-xl md:text-2xl font-semibold mb-4 text-blue-800">
-        <a target="_blank" href="">Check out my other projects in Kotlin, Java and Django</a>
+        <a target="_blank" href="https://github.com/boshma">Check out my other projects in Kotlin, Java and Django</a>
       </p>
     </div>
   );
