@@ -3,7 +3,7 @@ import React from 'react';
 const ExperienceSection = () => {
   const sections = [
     { title: "About me", text: "I love hanging with friends, hiking,movies, fitness, and web dev in my spare time. Right now, my passion project is centered around extending an all-in-one fitness app." },
-    { title: "Work experience", text: "I'm a software engineer with a passion for building stuff that solves problems. I've interned for Invent working with TypeScript, React, styled components and their micro frontend system building software for Wealth-management clients." },
+    { title: "Work experience", text: "I am passionate about developing innovative and user-friendly software that can solve real-world problems and improve people's lives.I've interned for Invent where I was part of a team that used micro-frontends to create modular and scalable web applications that met the needs and expectations of Invent's customers.  I am grateful to have learned from my mentors and peers at Invent, and to have contributed to the company's mission and vision." },
   ];
 
   const listItems = [
