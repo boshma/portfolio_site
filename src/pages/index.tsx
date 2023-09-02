@@ -28,7 +28,7 @@ const Home = () => {
         <title>Welcome | Bogdan Shmat - Software Engineer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" /> {/* Added viewport meta tag */}
         <meta name="description" content="Bogdan Shmat - Software Engineer. A full-stack developer with experience in Next.js, TypeScript, and Tailwind CSS." />
-        <link rel="icon" href="" />
+        <link rel="icon" href="/flag-ukraine.svg" type="image/svg+xml" />
       </Head>
 
       <HeaderSection />
