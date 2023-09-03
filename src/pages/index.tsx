@@ -1,4 +1,4 @@
-// src/pages/index.tsxxbiio
+// src/pages/index.tsx
 import Head from 'next/head';
 import NavBar from '~/components/NavBar';
 import { useEffect, useState } from 'react';
