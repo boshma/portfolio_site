@@ -25,7 +25,7 @@ const Home = () => {
     <>
       <NavBar navBottom={navBottom} />
       <Head>
-        <title>Welcome | Bogdan Shmat - Software Engineer</title>
+        <title>Bogdan Shmat | Software Engineer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" /> {/* Added viewport meta tag */}
         <meta name="description" content="Bogdan Shmat - Software Engineer." />
         <link rel="icon" href="/flag-ukraine.svg" type="image/svg+xml" />
