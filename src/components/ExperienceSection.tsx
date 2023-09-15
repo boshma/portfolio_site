@@ -7,7 +7,7 @@ const ExperienceSection = () => {
   ];
 
   const listItems = [
-    "Food: Sushi / Teriyaki / Steak",
+    "Food: Sushi / Orange Chicken",
     "Drink: Tea / Coffee / Fanta",
     "Movie: Dodgeball / LOTR",
     "TV Show: The Office" ,
