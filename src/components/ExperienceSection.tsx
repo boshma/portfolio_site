@@ -8,7 +8,7 @@ const ExperienceSection = () => {
 
   const listItems = [
     "Food: Sushi / Orange Chicken",
-    "Drink: Tea / Coffee / Fanta",
+    "Drink: Coffee w/ Almond Milk",
     "Movie: Dodgeball / LOTR",
     "TV Show: The Office" ,
     "Game: OSRS",
