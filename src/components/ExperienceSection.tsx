@@ -15,7 +15,6 @@ const ExperienceSection = () => {
     "Music: Basically everything",
     "Book: The Inheritance Cycle",
     "Vacation: Cancun",
-    "Animal: ragdolls",
     "Exercise: Deadlift"
 
   ];
