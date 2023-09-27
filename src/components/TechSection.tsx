@@ -1,6 +1,6 @@
 //src/components/TechSection.tsx
-import { Icon } from '@iconify/react';
-import React, { useEffect, useState } from 'react';
+import { Icon } from "@iconify/react";
+import React, { useEffect, useState } from "react";
 
 const TechSection = () => {
   const [animate, setAnimate] = useState(false);
@@ -46,18 +46,36 @@ const TechSection = () => {
     { icon: "skill-icons:styledcomponents", name: "Styled-Components" },
   ];
   return (
-    <div ref={techSectionRef} id="tech" className="flex flex-wrap md:mx-52 p-8">
-      <h2 className="w-full text-4xl font-bold text-center text-blue-600 mb-8 italic tracking-widest">My fav tech</h2>
+    <div ref={techSectionRef} id="tech" className="flex flex-wrap p-8 md:mx-52">
+      <h2 className="mb-8 w-full text-center text-4xl font-bold italic tracking-widest text-blue-600">
+        My fav tech
+      </h2>
       {techItems.map((item, index) => (
-        <div key={index} className="flex flex-col items-center w-full sm:w-1/2 md:w-1/4 p-4">
+        <div
+          key={index}
+          className="flex w-full flex-col items-center p-4 sm:w-1/2 md:w-1/4"
+        >
           <div
-            className={`opacity-0 perspective-container border-16 border-gray-400 rounded-lg p-8 flex justify-center items-center ${animate ? `animate-fadein-spin delay-${(index % techItems.length) * 100}` : ''} ${!isInView ? 'animate-fadeout' : ''
-              }`}
-            style={{ animationDelay: `${index * 180}ms`, height: '160px', width: '160px' }} // 4x the original size
+            className={`perspective-container border-16 flex items-center justify-center rounded-lg border-gray-400 p-8 opacity-0 ${animate
+                ? `animate-fadein-spin delay-${(index % techItems.length) * 100
+                }`
+                : ""
+              } ${!isInView ? "animate-fadeout" : ""}`}
+            style={{
+              animationDelay: `${index * 180}ms`,
+              height: "160px",
+              width: "160px",
+            }} // 4x the original size
           >
-            <Icon icon={item.icon} className="w-40 h-40" /> {/* 4x the original size */}
+           <Icon
+  icon={item.icon}
+  className={`h-40 w-40 ${item.name === "Tailwind" ? "icon-glow-blue" : ""}`}
+/>
+            {/* 4x the original size */}
           </div>
-          <p className="mt-2 text-xl font-semibold text-blue-100 text-center leading-snug h-[50px]">{item.name}</p>
+          <p className="mt-2 h-[50px] text-center text-xl font-semibold leading-snug text-blue-100">
+            {item.name}
+          </p>
         </div>
       ))}
     </div>
