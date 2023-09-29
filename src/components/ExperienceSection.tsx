@@ -2,7 +2,7 @@ import React from 'react';
 
 const ExperienceSection = () => {
   const sections = [
-    { title: "About me", text: "I love hanging with friends, hiking,movies, fitness, and building personal projects. I am currently a senior at Washington State University pursuing a degree in Software Engineering. I also have a tuxedo-ragdoll cat named Ash whose company I enjoy. " },
+    { title: "About me", text: "I love hanging with friends, hiking,movies, fitness, and building personal projects. I am currently a senior at Washington State University pursuing a degree in Software Engineering. My end goal is reaching Principal/Partner Engineer at a major tech company. " },
     { title: "Work experience", text: "I am passionate about developing innovative and user-friendly software that can solve real-world problems and improve people's lives. This past summer, I interned for Invent where I was part of a team that used micro-frontends to create PWAs for financial clients. " },
   ];
 
