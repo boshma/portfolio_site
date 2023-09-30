@@ -88,7 +88,7 @@ const TechSection = () => {
               className={`h-20 w-20 lg:h-40 lg:w-40 ${getIconGlowClass(item.name)}`}
             />
           </div>
-          <p className="mt-2 h-[25px] lg:h-[50px] text-center text-lg lg:text-xl font-semibold leading-snug text-blue-100">
+          <p className="mt-2 h-[25px] lg:h-[50px] text-center text-xs sm:text-lg lg:text-xl font-semibold leading-snug text-blue-100">
             {item.name}
           </p>
         </div>
