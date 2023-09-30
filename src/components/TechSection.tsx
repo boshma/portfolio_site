@@ -69,10 +69,10 @@ const TechSection = () => {
       {techItems.map((item, index) => (
         <div
           key={index}
-          className="flex w-full flex-col items-center p-4 sm:w-1/2 md:w-1/4"
+          className="flex w-1/4 flex-col items-center p-4 sm:w-1/2 lg:w-1/4"
         >
           <div
-            className={`perspective-container border-16 flex items-center justify-center rounded-lg border-gray-400 p-8 opacity-0 ${
+            className={`perspective-container border-16 flex items-center justify-center rounded-lg border-gray-400 p-4 lg:p-8 opacity-0 w-[80px] h-[80px] lg:w-[160px] lg:h-[160px] ${
               animate
                 ? `animate-fadein-spin delay-${
                     (index % techItems.length) * 100
@@ -80,24 +80,23 @@ const TechSection = () => {
                 : ""
             } ${!isInView ? "animate-fadeout" : ""}`}
             style={{
-              animationDelay: `${index * 180}ms`,
-              height: "160px",
-              width: "160px",
-            }} // 4x the original size
+              animationDelay: `${index * 180}ms`
+            }}
           >
             <Icon
               icon={item.icon}
-              className={`h-40 w-40 ${getIconGlowClass(item.name)}`}
+              className={`h-20 w-20 lg:h-40 lg:w-40 ${getIconGlowClass(item.name)}`}
             />
-            {/* 4x the original size */}
           </div>
-          <p className="mt-2 h-[50px] text-center text-xl font-semibold leading-snug text-blue-100">
+          <p className="mt-2 h-[25px] lg:h-[50px] text-center text-lg lg:text-xl font-semibold leading-snug text-blue-100">
             {item.name}
           </p>
         </div>
       ))}
     </div>
   );
+  
+
 };
 
 export default TechSection;
