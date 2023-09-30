@@ -57,9 +57,9 @@ const TechSection = () => {
         >
           <div
             className={`perspective-container border-16 flex items-center justify-center rounded-lg border-gray-400 p-8 opacity-0 ${animate
-                ? `animate-fadein-spin delay-${(index % techItems.length) * 100
-                }`
-                : ""
+              ? `animate-fadein-spin delay-${(index % techItems.length) * 100
+              }`
+              : ""
               } ${!isInView ? "animate-fadeout" : ""}`}
             style={{
               animationDelay: `${index * 180}ms`,
@@ -67,10 +67,11 @@ const TechSection = () => {
               width: "160px",
             }} // 4x the original size
           >
-           <Icon
-  icon={item.icon}
-  className={`h-40 w-40 ${item.name === "Tailwind" ? "icon-glow-blue" : ""}`}
-/>
+            <Icon
+              icon={item.icon}
+              className={`h-40 w-40 ${item.name === "Tailwind" ? "icon-glow-blue" : item.name === "React" ? "icon-glow-react" : ""
+                }`}
+            />
             {/* 4x the original size */}
           </div>
           <p className="mt-2 h-[50px] text-center text-xl font-semibold leading-snug text-blue-100">

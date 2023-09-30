@@ -23,8 +23,11 @@
   }
 
   .icon-glow-react {
+    animation: icon-glow-animation 2s infinite alternate;
+    filter: drop-shadow(0 0 10px var(--glow-color));
     --glow-color: #61DAFB;
   }
+
 
   .icon-glow-prisma {
     --glow-color: #0C344B;
