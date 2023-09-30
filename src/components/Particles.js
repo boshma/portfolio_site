@@ -39,7 +39,7 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
           value: 1,
           anim: {
             enable: true,
-            speed: 8,
+            speed: isMobile ? 2 : 8,
             opacity_min: 0.4,
             sync: false
           }
