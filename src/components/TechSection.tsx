@@ -2,6 +2,21 @@
 import { Icon } from "@iconify/react";
 import React, { useEffect, useState } from "react";
 
+const getIconGlowClass = (name: string) => {
+  const techToGlowClassMap: Record<string, string> = {
+    Tailwind: "icon-glow-blue",
+    React: "icon-glow-react",
+    Prisma: "icon-glow-prisma",
+    tRPC: "icon-glow-trpc",
+    PlanetScale: "icon-glow-planetscale",
+    "Next.js": "icon-glow-nextjs",
+    TypeScript: "icon-glow-typescript",
+    "Styled-Components": "icon-glow-styledcomponents",
+  };
+
+  return techToGlowClassMap[name] || "";
+};
+
 const TechSection = () => {
   const [animate, setAnimate] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -56,11 +71,13 @@ const TechSection = () => {
           className="flex w-full flex-col items-center p-4 sm:w-1/2 md:w-1/4"
         >
           <div
-            className={`perspective-container border-16 flex items-center justify-center rounded-lg border-gray-400 p-8 opacity-0 ${animate
-              ? `animate-fadein-spin delay-${(index % techItems.length) * 100
-              }`
-              : ""
-              } ${!isInView ? "animate-fadeout" : ""}`}
+            className={`perspective-container border-16 flex items-center justify-center rounded-lg border-gray-400 p-8 opacity-0 ${
+              animate
+                ? `animate-fadein-spin delay-${
+                    (index % techItems.length) * 100
+                  }`
+                : ""
+            } ${!isInView ? "animate-fadeout" : ""}`}
             style={{
               animationDelay: `${index * 180}ms`,
               height: "160px",
@@ -69,8 +86,7 @@ const TechSection = () => {
           >
             <Icon
               icon={item.icon}
-              className={`h-40 w-40 ${item.name === "Tailwind" ? "icon-glow-blue" : item.name === "React" ? "icon-glow-react" : ""
-                }`}
+              className={`h-40 w-40 ${getIconGlowClass(item.name)}`}
             />
             {/* 4x the original size */}
           </div>

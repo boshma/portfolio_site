@@ -14,45 +14,46 @@
     justify-content: center;
     align-items: center;
   }
-
+/* Utility Layer */
 @layer utilities {
-  .icon-glow-blue {
-    animation: icon-glow-animation 2s infinite alternate;
-    filter: drop-shadow(0 0 10px #1DA1F2);
-    --glow-color: #1DA1F2;
-  }
-
-  .icon-glow-react {
+  /* Glow effect for icons */
+  .icon-glow-blue,
+  .icon-glow-react,
+  .icon-glow-prisma,
+  .icon-glow-trpc,
+  .icon-glow-planetscale,
+  .icon-glow-nextjs,
+  .icon-glow-typescript,
+  .icon-glow-styledcomponents {
     animation: icon-glow-animation 2s infinite alternate;
     filter: drop-shadow(0 0 10px var(--glow-color));
-    --glow-color: #61DAFB;
   }
 
-
+  /* Setting color for each icon type */
+  .icon-glow-blue {
+    --glow-color: #1DA1F2;
+  }
+  .icon-glow-react {
+    --glow-color: #61DAFB;
+  }
   .icon-glow-prisma {
     --glow-color: #0C344B;
   }
-
   .icon-glow-trpc {
     --glow-color: #5A67D8;
   }
-
   .icon-glow-planetscale {
     --glow-color: #3E64FF;
   }
-
   .icon-glow-nextjs {
     --glow-color: #000000;
   }
-
   .icon-glow-typescript {
     --glow-color: #007ACC;
   }
-
   .icon-glow-styledcomponents {
     --glow-color: #DB7093;
   }
-
   @keyframes icon-glow-animation {
     from {
       filter: drop-shadow(0 0 5px var(--glow-color)) drop-shadow(0 0 10px var(--glow-color));
