@@ -17,7 +17,7 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
   }, []);
 
   const options = useMemo(() => {
-    const particleNumber = isMobile ? 20 : 50;
+    const particleNumber = 50;
 
     return {
       fullScreen: {
