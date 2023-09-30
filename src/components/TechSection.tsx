@@ -14,7 +14,8 @@ const getIconGlowClass = (name: string) => {
     "Styled-Components": "icon-glow-styledcomponents",
   };
 
-  return techToGlowClassMap[name] || "";
+  return techToGlowClassMap[name] ?? "";
+
 };
 
 const TechSection = () => {
