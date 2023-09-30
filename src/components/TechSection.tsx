@@ -2,21 +2,21 @@
 import { Icon } from "@iconify/react";
 import React, { useEffect, useState } from "react";
 
-const getIconGlowClass = (name: string) => {
-  const techToGlowClassMap: Record<string, string> = {
-    Tailwind: "icon-glow-blue",
-    React: "icon-glow-react",
-    Prisma: "icon-glow-prisma",
-    tRPC: "icon-glow-trpc",
-    PlanetScale: "icon-glow-planetscale",
-    "Next.js": "icon-glow-nextjs",
-    TypeScript: "icon-glow-typescript",
-    "Styled-Components": "icon-glow-styledcomponents",
+const getTechClasses = (name: string) => {
+  const techToClassesMap: Record<string, {icon: string, text: string}> = {
+    Tailwind: { icon: "icon-glow-blue", text: "text-color-blue" },
+    React: { icon: "icon-glow-react", text: "text-color-react" },
+    Prisma: { icon: "icon-glow-prisma", text: "text-color-prisma" },
+    tRPC: { icon: "icon-glow-trpc", text: "text-color-trpc" },
+    PlanetScale: { icon: "icon-glow-planetscale", text: "text-color-planetscale" },
+    "Next.js": { icon: "icon-glow-nextjs", text: "text-color-nextjs" },
+    TypeScript: { icon: "icon-glow-typescript", text: "text-color-typescript" },
+    "Styled-Components": { icon: "icon-glow-styledcomponents", text: "text-color-styledcomponents" },
   };
 
-  return techToGlowClassMap[name] ?? "";
-
+  return techToClassesMap[name] ?? { icon: "", text: "" };
 };
+
 
 const TechSection = () => {
   const [animate, setAnimate] = useState(false);
@@ -66,37 +66,38 @@ const TechSection = () => {
       <h2 className="mb-8 w-full text-center text-4xl font-bold italic tracking-widest text-blue-600">
         My fav tech
       </h2>
-      {techItems.map((item, index) => (
-        <div
-          key={index}
-          className="flex w-1/4 flex-col items-center p-4 sm:w-1/2 lg:w-1/4"
-        >
+      {techItems.map((item, index) => {
+        const { icon: iconClass, text: textClass } = getTechClasses(item.name);
+        return (
           <div
-            className={`perspective-container border-16 flex items-center justify-center rounded-lg border-gray-400 p-4 lg:p-8 opacity-0 w-[80px] h-[80px] lg:w-[160px] lg:h-[160px] ${
-              animate
-                ? `animate-fadein-spin delay-${
-                    (index % techItems.length) * 100
-                  }`
-                : ""
-            } ${!isInView ? "animate-fadeout" : ""}`}
-            style={{
-              animationDelay: `${index * 180}ms`,
-            }}
+            key={index}
+            className="flex w-1/4 flex-col items-center p-4 sm:w-1/2 lg:w-1/4"
           >
-            <Icon
-              icon={item.icon}
-              className={`h-20 w-20 lg:h-40 lg:w-40 ${getIconGlowClass(item.name)}`}
-            />
+            <div
+              className={`perspective-container border-16 flex items-center justify-center rounded-lg border-gray-400 p-4 lg:p-8 opacity-0 w-[80px] h-[80px] lg:w-[160px] lg:h-[160px] ${
+                animate
+                  ? `animate-fadein-spin delay-${
+                      (index % techItems.length) * 100
+                    }`
+                  : ""
+              } ${!isInView ? "animate-fadeout" : ""}`}
+              style={{
+                animationDelay: `${index * 180}ms`,
+              }}
+            >
+              <Icon
+                icon={item.icon}
+                className={`h-20 w-20 lg:h-40 lg:w-40 ${iconClass}`}
+              />
+            </div>
+            <p className={`mt-2 h-[25px] lg:h-[50px] text-center text-xs sm:text-lg lg:text-xl font-semibold leading-snug ${textClass}`}>
+              {item.name}
+            </p>
           </div>
-          <p className="mt-2 h-[25px] lg:h-[50px] text-center text-xs sm:text-lg lg:text-xl font-semibold leading-snug text-blue-100">
-            {item.name}
-          </p>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
-  
-
 };
 
 export default TechSection;

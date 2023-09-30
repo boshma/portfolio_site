@@ -28,6 +28,39 @@
     animation: icon-glow-animation 2s infinite alternate;
     filter: drop-shadow(0 0 10px var(--glow-color));
   }
+  /* Setting color for each text type */
+  .text-color-blue {
+    --text-color: #1DA1F2;
+    color: var(--text-color);
+  }
+  .text-color-react {
+    --text-color: #61DAFB;
+    color: var(--text-color);
+  }
+  .text-color-prisma {
+    --text-color: #0C344B;
+    color: var(--text-color);
+  }
+  .text-color-trpc {
+    --text-color: #5A67D8;
+    color: var(--text-color);
+  }
+  .text-color-planetscale {
+    --text-color: #3E64FF;
+    color: var(--text-color);
+  }
+  .text-color-nextjs {
+    --text-color: #000000;
+    color: var(--text-color);
+  }
+  .text-color-typescript {
+    --text-color: #007ACC;
+    color: var(--text-color);
+  }
+  .text-color-styledcomponents {
+    --text-color: #DB7093;
+    color: var(--text-color);
+  }
 
   /* Setting color for each icon type */
   .icon-glow-blue {
