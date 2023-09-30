@@ -17,7 +17,7 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
   }, []);
 
   const options = useMemo(() => {
-    const particleNumber = isMobile ? 20 : 50;
+    const particleNumber = isMobile ? 5 : 50;
     const particleSpeed = isMobile ? 1 : 3;
 
     return {
