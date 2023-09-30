@@ -53,13 +53,13 @@ const TechSection = () => {
   }, []);
   const techItems = [
     { icon: "logos:react", name: "React" },
-    { icon: "vscode-icons:file-type-light-prisma", name: "Prisma" },
-    { icon: "logos:trpc", name: "tRPC" },
-    { icon: "devicon:tailwindcss", name: "Tailwind" },
-    { icon: "logos:planetscale", name: "PlanetScale" },
-    { icon: "logos:nextjs-icon", name: "Next.js" },
-    { icon: "logos:typescript-icon", name: "TypeScript" },
     { icon: "skill-icons:styledcomponents", name: "Styled-Components" },
+    { icon: "logos:planetscale", name: "PlanetScale" },
+    { icon: "devicon:tailwindcss", name: "Tailwind" },
+    { icon: "logos:nextjs-icon", name: "Next.js" },
+    { icon: "vscode-icons:file-type-light-prisma", name: "Prisma" },
+    { icon: "logos:typescript-icon", name: "TypeScript" },
+    { icon: "logos:trpc", name: "tRPC" },
   ];
   return (
     <div ref={techSectionRef} id="tech" className="flex flex-wrap p-8 md:mx-52">
@@ -80,7 +80,7 @@ const TechSection = () => {
                 : ""
             } ${!isInView ? "animate-fadeout" : ""}`}
             style={{
-              animationDelay: `${index * 180}ms`
+              animationDelay: `${index * 180}ms`,
             }}
           >
             <Icon
