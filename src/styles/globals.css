@@ -28,6 +28,10 @@
     animation: icon-glow-animation 2s infinite alternate;
     filter: drop-shadow(0 0 10px var(--glow-color));
   }
+
+  .pb-full {
+    padding-bottom: 100%;
+  }
   /* Setting color for each text type */
   .text-color-blue {
     --text-color: #1DA1F2;
