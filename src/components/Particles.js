@@ -17,8 +17,7 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
   }, []);
 
   const options = useMemo(() => {
-    const particleNumber = isMobile ? 5 : 50;
-    const particleSpeed = isMobile ? 1 : 3;
+    const particleNumber = isMobile ? 20 : 50;
 
     return {
       fullScreen: {
@@ -30,7 +29,7 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
           value: particleNumber,
           density: {
             enable: true,
-            value_area: 500
+            value_area: 800
           }
         },
         color: {
@@ -56,10 +55,10 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
           enable: false
         },
         move: {
-          enable: true,
-          speed: particleSpeed,
-          direction: "right",
-          straight: true
+          enable: !isMobile,  // Make them stationary on mobile
+          speed: 3,
+          direction: isMobile ? "none" : "right",  // Moving left to right on desktop
+          straight: isMobile ? false : true  // Straight movement only on desktop
         },
       },
       interactivity: {
@@ -74,7 +73,7 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
         }
       }
     };
-  }, [isMobile]);
+  }, [isMobile])
   // useCallback is not mandatory, but it's recommended since this callback can be memoized if static
   const particlesInit = useCallback(async (/** @type {import("tsparticles-engine").Engine} */ engine) => {
     await loadFull(engine);
