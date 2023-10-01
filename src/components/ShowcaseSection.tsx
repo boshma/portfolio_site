@@ -13,8 +13,13 @@ const ShowcaseSection = () => {
       </h2>
       <div className="flex flex-col md:flex-row justify-center">
         <div className="w-full md:w-1/2 p-4">
-          <p className="text-2xl md:text-4xl text-indigo-700 font-semibold mb-4">All in one Fitness App!</p>
+          <p className="text-2xl md:text-4xl text-indigo-700 font-semibold mb-4">Fitness App!</p>
           <ul className="text-xl md:text-2xl text-indigo-500 font-serif">
+          <li> SSO auth/protected routes with Clerk
+              <div className="relative w-full h-[200px] md:h-[400px]">
+                <Image src="/auth.jpg" alt="auth" layout="fill" objectFit="contain" />
+              </div>
+            </li>
             <li>Quick add meals
               <div className="relative w-full h-[200px] md:h-[400px]">
                 <Image src="/quickadd.jpg" alt="Quick add" layout="fill" objectFit="contain" />
