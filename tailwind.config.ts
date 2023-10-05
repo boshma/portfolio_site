@@ -58,6 +58,14 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        fadeInExperience: {
+          '0%': { opacity: '0', transform: 'scale(0.9)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        fadeOutExperience: {
+          '0%': { opacity: '1', transform: 'scale(1)' },
+          '100%': { opacity: '0', transform: 'scale(0.9)' },
+        },
         blink: {
           '0%': { opacity: 1 },
           '50%': { opacity: 0 },
@@ -101,6 +109,8 @@ module.exports = {
         // ...
       },
       animation: {
+        fadeInExperience: 'fadeInExperience 0.5s ease-in forwards',
+        fadeOutExperience: 'fadeOutExperience 0.5s ease-out forwards',
         'fadein-spin': 'fadein 0.5s ease-in forwards, spin 2s linear 0.5s forwards',
         'fadeout': 'fadeout 0.5s ease-out',
         spin: 'spin 2s linear',
