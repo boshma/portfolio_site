@@ -57,17 +57,18 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
         move: {
           enable: true,  
           speed: 3,
-          direction: isMobile ? "none" : "right",  // Moving left to right on desktop
-          straight: isMobile ? false : true  // Straight movement only on desktop
+          direction: "right", 
+          straight: true  
         },
       },
+    
       interactivity: {
-        detect_on: 'canvas',
+        detectsOn: 'canvas',
         events: {
           onhover: {
             enable: false
           },
-          onclick: {
+          onClick: {
             enable: false
           }
         }
