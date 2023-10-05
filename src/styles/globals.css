@@ -16,7 +16,21 @@
   }
 /* Utility Layer */
 @layer utilities {
-  /* Glow effect for icons */
+  /* Remove glow effect for all icons by default */
+.icon-glow-blue,
+.icon-glow-react,
+.icon-glow-prisma,
+.icon-glow-trpc,
+.icon-glow-planetscale,
+.icon-glow-nextjs,
+.icon-glow-typescript,
+.icon-glow-styledcomponents {
+  animation: none;
+  filter: none;
+}
+
+/* Apply glow effect starting from sm breakpoint */
+@media (min-width: 640px) { /* 640px is the default sm breakpoint in Tailwind */
   .icon-glow-blue,
   .icon-glow-react,
   .icon-glow-prisma,
@@ -28,7 +42,7 @@
     animation: icon-glow-animation 2s infinite alternate;
     filter: drop-shadow(0 0 10px var(--glow-color));
   }
-
+}
   .pb-full {
     padding-bottom: 100%;
   }
