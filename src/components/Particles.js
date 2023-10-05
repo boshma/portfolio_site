@@ -55,7 +55,7 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
           enable: false
         },
         move: {
-          enable: !isMobile,  // Make them stationary on mobile
+          enable: true,  
           speed: 3,
           direction: isMobile ? "none" : "right",  // Moving left to right on desktop
           straight: isMobile ? false : true  // Straight movement only on desktop
