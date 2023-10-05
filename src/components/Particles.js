@@ -17,8 +17,6 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
   }, []);
 
   const options = useMemo(() => {
-    const particleNumber = 50;
-
     return {
       fullScreen: {
         enable: false,
@@ -26,55 +24,115 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
       },
       particles: {
         number: {
-          value: particleNumber,
+          value: 355,
           density: {
             enable: true,
-            value_area: 800
+            value_area: 789.1476416322727
           }
         },
         color: {
-          value: "#fff"
+          value: "#ffffff"
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000"
+          },
+          polygon: {
+            nb_sides: 5
+          },
+          image: {
+            src: "img/github.svg",
+            width: 100,
+            height: 100
+          }
         },
         opacity: {
-          value: 1,
+          value: 0.48927153781200905,
+          random: false,
           anim: {
             enable: true,
-            speed: isMobile ? 2 : 8,
-            opacity_min: 0.4,
+            speed: 0.2,
+            opacity_min: 0,
             sync: false
           }
         },
-        shape: {
-          type: "circle"
-        },
         size: {
-          value: 5,
-          random: true
+          value: 2,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 2,
+            size_min: 0,
+            sync: false
+          }
         },
         line_linked: {
-          enable: false
+          enable: false,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1
         },
         move: {
-          enable: true,  
-          speed: 3,
-          direction: "right", 
-          straight: true  
-        },
+          enable: true,
+          speed: 0.2,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200
+          }
+        }
       },
-    
       interactivity: {
         detectsOn: 'canvas',
         events: {
           onhover: {
-            enable: false
+            enable: true,
+            mode: "bubble"
           },
-          onClick: {
-            enable: false
+          onclick: {
+            enable: true,
+            mode: "push"
+          },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 400,
+            line_linked: {
+              opacity: 1
+            }
+          },
+          bubble: {
+            distance: 83.91608391608392,
+            size: 1,
+            duration: 3,
+            opacity: 1,
+            speed: 3
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 4
+          },
+          remove: {
+            particles_nb: 2
           }
         }
-      }
+      },
+      retina_detect: true
     };
-  }, [isMobile])
+  }, []);
+  
   // useCallback is not mandatory, but it's recommended since this callback can be memoized if static
   const particlesInit = useCallback(async (/** @type {import("tsparticles-engine").Engine} */ engine) => {
     await loadFull(engine);
