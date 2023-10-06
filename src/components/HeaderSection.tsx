@@ -1,18 +1,36 @@
 // src/components/HeaderSection.tsx
+import React, { useState, useEffect } from 'react';
 import TypingText from '~/components/typingtext';
 import HeartSVG from '~/components/heartSVG';
 
 const HeaderSection = () => {
+  const [windowWidth, setWindowWidth] = useState<number | null>(null);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <main style={{ background: "radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)" }} className="flex justify-center items-center h-screen text-white relative overflow-hidden">
 
       <div id="stars" className="absolute inset-0 z-10 w-full h-full"></div>
       <div id="stars2" className="absolute inset-0 z-10 w-full h-full"></div>
       <div id="stars3" className="absolute inset-0 z-10 w-full h-full"></div>
-      <div id="title" className="absolute z-20 top-1/5 sm:top-1/10 md:top-1/5 lg:top-1/5 xl:top-1/5 2xl:top-1/5 text-center w-full">
-
-
-
+      <div 
+        id="title" 
+        style={windowWidth && windowWidth <= 640 ? { top: "10%" } : {}} 
+        className="absolute z-20 text-center w-full"
+      >
         <span>Hey, I&apos;m Bogdan</span>
         <div className="flex items-center justify-center mt-4">
           <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl mr-2">I</h2>
