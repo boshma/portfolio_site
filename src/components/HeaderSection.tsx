@@ -28,7 +28,7 @@ const HeaderSection = () => {
       <div id="stars3" className="absolute inset-0 z-10 w-full h-full"></div>
       <div 
         id="title" 
-        style={windowWidth && windowWidth <= 640 ? { top: "10%" } : {}} 
+        style={windowWidth && windowWidth <= 640 ? { top: "30%" } : {}} 
         className="absolute z-20 text-center w-full"
       >
         <span>Hey, I&apos;m Bogdan</span>
