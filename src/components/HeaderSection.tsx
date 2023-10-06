@@ -9,7 +9,8 @@ const HeaderSection = () => {
       <div id="stars" className="absolute inset-0 z-10 w-full h-full"></div>
       <div id="stars2" className="absolute inset-0 z-10 w-full h-full"></div>
       <div id="stars3" className="absolute inset-0 z-10 w-full h-full"></div>
-      <div id="title" className="absolute z-20 top-1/4 text-center w-full">
+      <div id="title" className="absolute z-20 top-1/5 text-center w-full md:top-1/4">
+
         <span>Hey, I&apos;m Bogdan</span>
         <div className="flex items-center justify-center mt-4">
           <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl mr-2">I</h2>
