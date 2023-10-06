@@ -4,7 +4,8 @@ import HeartSVG from '~/components/heartSVG';
 
 const HeaderSection = () => {
   return (
-    <main className="flex justify-center items-center h-screen bg-gray-900 text-white relative overflow-hidden">
+    <main style={{ background: "radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)" }} className="flex justify-center items-center h-screen text-white relative overflow-hidden">
+
       <div id="stars" className="absolute inset-0 z-10 w-full h-full"></div>
       <div id="stars2" className="absolute inset-0 z-10 w-full h-full"></div>
       <div id="stars3" className="absolute inset-0 z-10 w-full h-full"></div>
