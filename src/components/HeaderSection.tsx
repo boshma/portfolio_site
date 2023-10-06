@@ -34,7 +34,7 @@ const HeaderSection = () => {
         <span>Hey, I&apos;m Bogdan</span>
         <div className="flex items-center justify-center mt-4">
           <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl mr-2">I</h2>
-          <HeartSVG className="h-6 sm:h-8 md:h-10 lg:h-10 xl:h-10 2xl:h-12 w-6 sm:w-8 md:w-10 lg:w-10 xl:w-10 2xl:w-12 mr-2" />
+          <HeartSVG className="h-6 sm:h-8 md:h-10 lg:h-10 xl:h-10 2xl:h-12 w-6 sm:w-8 md:w-10 lg:w-10 xl:w-10 2xl:w-12 mr-3" />
           <TypingText className="z-10" />
         </div>
       </div>
