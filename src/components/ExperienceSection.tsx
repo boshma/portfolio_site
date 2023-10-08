@@ -10,7 +10,7 @@ const ExperienceSection = () => {
     },
     {
       title: "Work experience",
-      text: "Developing innovative and user-friendly software that solves real-world problems and improves people's lives is my passion. During my summer internship at Invent, I was part of a team that utilized micro-frontends to create PWAs for financial clients ",
+      text: "During my 3 month summer internship at Invent, I was part of a team of engineers and product managers that utilized micro-frontends to help build PWAs for financial clients using TypeScript, React, Styled-Components, Effector, and RTL/Jest.",
     },
   ];
 
