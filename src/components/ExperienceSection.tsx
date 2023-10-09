@@ -19,11 +19,9 @@ const ExperienceSection = () => {
     "Drink: Coffee w/ Almond Milk",
     "Movie: Dodgeball / LOTR",
     "TV Show: The Office",
-    "Game: OSRS",
     "Music: Basically everything",
     "Book: The Inheritance Cycle",
     "Vacation: Cancun",
-    "Exercise: Deadlift",
   ];
 
   const [ref, inView] = useInView({
