@@ -16,7 +16,7 @@ const ContactSection: React.FC = () => {
           <Icon icon="devicon:linkedin" style={{ fontSize: iconSize }} />
         </a>
         <div className="p-4 group relative">
-          <a href="/BogdanShmatResume.docx" target="_blank" rel="noopener noreferrer">
+          <a href="/BogdanShmat.docx" target="_blank" rel="noopener noreferrer">
             <Icon icon="fxemoji:scroll" style={{ fontSize: iconSize }} />
           </a>
           <div className="opacity-0 group-hover:opacity-100 absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full bg-black text-white text-xs rounded-lg p-2">
