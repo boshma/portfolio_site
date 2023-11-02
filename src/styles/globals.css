@@ -4,7 +4,6 @@
 @tailwind utilities;
 
 
- 
 @layer base {
   .perspective-container {
     perspective: 1000px;
@@ -14,178 +13,211 @@
     justify-content: center;
     align-items: center;
   }
-/* Utility Layer */
-@layer utilities {
-  /* Remove glow effect for all icons by default */
-.icon-glow-blue,
-.icon-glow-react,
-.icon-glow-prisma,
-.icon-glow-trpc,
-.icon-glow-planetscale,
-.icon-glow-nextjs,
-.icon-glow-typescript,
-.icon-glow-styledcomponents {
-  animation: none;
-  filter: none;
-}
 
-/* Apply glow effect starting from sm breakpoint */
-@media (min-width: 640px) { /* 640px is the default sm breakpoint in Tailwind */
-  .icon-glow-blue,
-  .icon-glow-react,
-  .icon-glow-prisma,
-  .icon-glow-trpc,
-  .icon-glow-planetscale,
-  .icon-glow-nextjs,
-  .icon-glow-typescript,
-  .icon-glow-styledcomponents {
-    animation: icon-glow-animation 2s infinite alternate;
-    filter: drop-shadow(0 0 10px var(--glow-color));
-  }
-}
-  .pb-full {
-    padding-bottom: 100%;
-  }
-  /* Setting color for each text type */
-  .text-color-blue {
-    --text-color: #1DA1F2;
-    color: var(--text-color);
-  }
-  .text-color-react {
-    --text-color: #61DAFB;
-    color: var(--text-color);
-  }
-  .text-color-prisma {
-    --text-color: #0C344B;
-    color: var(--text-color);
-  }
-  .text-color-trpc {
-    --text-color: #5A67D8;
-    color: var(--text-color);
-  }
-  .text-color-planetscale {
-    --text-color: #3E64FF;
-    color: var(--text-color);
-  }
-  .text-color-nextjs {
-    --text-color: #000000;
-    color: var(--text-color);
-  }
-  .text-color-typescript {
-    --text-color: #007ACC;
-    color: var(--text-color);
-  }
-  .text-color-styledcomponents {
-    --text-color: #DB7093;
-    color: var(--text-color);
-  }
+  /* Utility Layer */
+  @layer utilities {
 
-  /* Setting color for each icon type */
-  .icon-glow-blue {
-    --glow-color: #1DA1F2;
-  }
-  .icon-glow-react {
-    --glow-color: #61DAFB;
-  }
-  .icon-glow-prisma {
-    --glow-color: #0C344B;
-  }
-  .icon-glow-trpc {
-    --glow-color: #5A67D8;
-  }
-  .icon-glow-planetscale {
-    --glow-color: #3E64FF;
-  }
-  .icon-glow-nextjs {
-    --glow-color: #000000;
-  }
-  .icon-glow-typescript {
-    --glow-color: #007ACC;
-  }
-  .icon-glow-styledcomponents {
-    --glow-color: #DB7093;
-  }
-  @keyframes icon-glow-animation {
-    from {
-      filter: drop-shadow(0 0 5px var(--glow-color)) drop-shadow(0 0 10px var(--glow-color));
+    /* Remove glow effect for all icons by default */
+    .icon-glow-blue,
+    .icon-glow-react,
+    .icon-glow-prisma,
+    .icon-glow-trpc,
+    .icon-glow-planetscale,
+    .icon-glow-nextjs,
+    .icon-glow-typescript,
+    .icon-glow-styledcomponents {
+      animation: none;
+      filter: none;
     }
-    to {
-      filter: drop-shadow(0 0 10px var(--glow-color)) drop-shadow(0 0 20px var(--glow-color));
+
+    /* Apply glow effect starting from sm breakpoint */
+    @media (min-width: 640px) {
+
+      /* 640px is the default sm breakpoint in Tailwind */
+      .icon-glow-blue,
+      .icon-glow-react,
+      .icon-glow-prisma,
+      .icon-glow-trpc,
+      .icon-glow-planetscale,
+      .icon-glow-nextjs,
+      .icon-glow-typescript,
+      .icon-glow-styledcomponents {
+        animation: icon-glow-animation 2s infinite alternate;
+        filter: drop-shadow(0 0 10px var(--glow-color));
+      }
+    }
+
+    .snowfall-container {
+      position: absolute;
+      width: 100%;
+      /* Adjust the width as needed */
+      height: 100%;
+      /* Adjust the height as needed */
+      background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+      /* Set the background to transparent */
+    }
+
+    .pb-full {
+      padding-bottom: 100%;
+    }
+
+    /* Setting color for each text type */
+    .text-color-blue {
+      --text-color: #1DA1F2;
+      color: var(--text-color);
+    }
+
+    .text-color-react {
+      --text-color: #61DAFB;
+      color: var(--text-color);
+    }
+
+    .text-color-prisma {
+      --text-color: #0C344B;
+      color: var(--text-color);
+    }
+
+    .text-color-trpc {
+      --text-color: #5A67D8;
+      color: var(--text-color);
+    }
+
+    .text-color-planetscale {
+      --text-color: #3E64FF;
+      color: var(--text-color);
+    }
+
+    .text-color-nextjs {
+      --text-color: #000000;
+      color: var(--text-color);
+    }
+
+    .text-color-typescript {
+      --text-color: #007ACC;
+      color: var(--text-color);
+    }
+
+    .text-color-styledcomponents {
+      --text-color: #DB7093;
+      color: var(--text-color);
+    }
+
+    /* Setting color for each icon type */
+    .icon-glow-blue {
+      --glow-color: #1DA1F2;
+    }
+
+    .icon-glow-react {
+      --glow-color: #61DAFB;
+    }
+
+    .icon-glow-prisma {
+      --glow-color: #0C344B;
+    }
+
+    .icon-glow-trpc {
+      --glow-color: #5A67D8;
+    }
+
+    .icon-glow-planetscale {
+      --glow-color: #3E64FF;
+    }
+
+    .icon-glow-nextjs {
+      --glow-color: #000000;
+    }
+
+    .icon-glow-typescript {
+      --glow-color: #007ACC;
+    }
+
+    .icon-glow-styledcomponents {
+      --glow-color: #DB7093;
+    }
+
+    @keyframes icon-glow-animation {
+      from {
+        filter: drop-shadow(0 0 5px var(--glow-color)) drop-shadow(0 0 10px var(--glow-color));
+      }
+
+      to {
+        filter: drop-shadow(0 0 10px var(--glow-color)) drop-shadow(0 0 20px var(--glow-color));
+      }
     }
   }
-}
 
-  
+
 
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
- 
+
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
- 
+
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
- 
+
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
- 
+
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
- 
+
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
- 
+
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
- 
+
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
- 
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
- 
+
     --ring: 215 20.2% 65.1%;
- 
+
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
- 
+
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
- 
+
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
- 
+
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
- 
+
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
- 
+
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
- 
+
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
- 
+
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
- 
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
- 
+
     --ring: 217.2 32.6% 17.5%;
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
