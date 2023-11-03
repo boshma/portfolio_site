@@ -10,6 +10,27 @@ import ContactSection from "~/components/ContactSection";
 import Snow from "~/components/Snow";
 
 const Home = () => {
+
+    // State to determine if the device is considered mobile
+    const [isMobile, setIsMobile] = useState(false);
+
+    // Define your mobile width breakpoint, for example 768px for tablets
+    const mobileBreakpoint = 768;
+  
+    useEffect(() => {
+      const updateMobileStatus = () => {
+        setIsMobile(window.innerWidth < mobileBreakpoint);
+      };
+  
+      // Set the initial value
+      updateMobileStatus();
+  
+      // Add event listener for window resize
+      window.addEventListener('resize', updateMobileStatus);
+  
+      // Clean up event listener
+      return () => window.removeEventListener('resize', updateMobileStatus);
+    }, []);
   const [documentHeight, setDocumentHeight] = useState(0);
 
   useEffect(() => {
@@ -52,7 +73,7 @@ const Home = () => {
       <HeaderSection />
       <div className="h-1 bg-white"></div>
       <div className="relative">
-      <Snow documentHeight={documentHeight} />
+      {!isMobile && <Snow documentHeight={documentHeight} />}
         <div id="tech">
           <TechSection />
         </div>
