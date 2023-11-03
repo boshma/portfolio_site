@@ -31,7 +31,7 @@ const ExperienceSection = () => {
 
   return (
     <div id="experience" className="container mx-auto py-8 text-center">
-      <h2 className="mb-8 text-4xl font-bold italic tracking-widest text-blue-600">
+      <h2 className="mb-8 text-4xl font-bold italic tracking-widest text-blue-600 icon-glow-planetscale">
         Experience
       </h2>
       <div className="flex flex-wrap justify-center">
@@ -41,22 +41,22 @@ const ExperienceSection = () => {
             ref={ref}
             className={`w-full p-4 sm:w-1/2 lg:w-1/3 ${inView ? 'animate-fadeInExperience' : 'animate-fadeOutExperience'}`}
           >
-            <h3 className="mb-4 text-2xl font-semibold text-blue-400 sm:text-2xl md:text-2xl">
+            <h3 className="mb-4 text-2xl font-semibold text-blue-400 sm:text-2xl md:text-2xl icon-glow-styledcomponents">
               {section.title}
             </h3>
-            <p className="mx-auto max-w-sm rounded border p-4 text-lg shadow-lg sm:text-2xl md:text-2xl">
+            <p className="mx-auto max-w-sm rounded border p-4 text-lg shadow-lg sm:text-2xl md:text-2xl icon-glow-trpc text-color-react">
               {section.text}
             </p>
           </div>
         ))}
         <div className="w-full p-4 sm:w-1/2 lg:w-1/3">
-          <h3 className="mb-4 text-2xl font-semibold text-blue-400 sm:text-2xl md:text-2xl">
+          <h3 className="mb-4 text-2xl font-semibold text-blue-400 sm:text-2xl md:text-2xl icon-glow-styledcomponents">
             Fav things
           </h3>
           <div className="mx-auto max-w-sm rounded border p-4 text-lg shadow-lg sm:text-2xl md:text-2xl">
             <ul>
               {listItems.map((item, index) => (
-                <li key={index} className={inView ? 'animate-fadeInExperience' : 'animate-fadeOutExperience'}>
+                <li key={index} className={inView ? 'animate-fadeInExperience icon-glow-trpc text-color-react' : 'animate-fadeOutExperience'}>
                   {item}
                 </li>
               ))}

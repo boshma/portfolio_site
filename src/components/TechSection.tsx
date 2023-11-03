@@ -18,7 +18,13 @@ const getTechClasses = (name: string) => {
 };
 
 
-const TechSection = () => {
+
+
+type TechSectionProps = {
+  className?: string; // Make className optional
+};
+
+const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
   const [animate, setAnimate] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const techSectionRef = React.useRef<HTMLDivElement | null>(null);

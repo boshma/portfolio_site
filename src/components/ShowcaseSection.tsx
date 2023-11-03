@@ -5,7 +5,7 @@ import Image from 'next/image';
 const ShowcaseSection = () => {
   return (
     <div id="showcase" className="container mx-auto text-center py-8">
-      <h2 className="text-3xl md:text-6xl font-bold text-blue-600 mb-4 italic tracking-widest">
+      <h2 className="text-3xl md:text-6xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale">
         <a target="_blank" href="https://www.nutrifit.dev/" rel="noopener noreferrer">NutriFit</a>
       </h2>
       <h2 className="text-2xl md:text-4xl font-bold text-blue-400 mb-4 italic tracking-widest">

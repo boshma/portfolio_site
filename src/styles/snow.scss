@@ -2,12 +2,13 @@
 
 
 body {
-  height: 100vh;
+  // height: 100vh;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   // overflow: hidden;
   filter: drop-shadow(0 0 10px white);
   z-index: 0; // Ensure this is behind other content
   position: relative; 
+  // padding-bottom: 4rem;
 }
 
 @function random_range($min, $max) {

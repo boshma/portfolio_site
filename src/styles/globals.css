@@ -16,6 +16,10 @@
 
   /* Utility Layer */
   @layer utilities {
+    .label-glow {
+      color: white; /* White text color */
+      animation: white-glow 2s infinite alternate;
+    }
 
     /* Remove glow effect for all icons by default */
     .icon-glow-blue,
@@ -146,9 +150,25 @@
     }
   }
 
+  @keyframes white-glow {
+    0% {
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+      text-shadow: 0 0 16px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+    }
+  }
+  
+
 
 
   :root {
+
+    --glow-color-white: #ffffff; /* white color for the glow effect */
+
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 

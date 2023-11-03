@@ -58,6 +58,12 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        'white-glow': {
+          '0%': { 'text-shadow': '0 0 8px rgba(255, 255, 255, 0.2)' },
+          '50%': { 'text-shadow': '0 0 16px rgba(255, 255, 255, 0.5)' },
+          '100%': { 'text-shadow': '0 0 8px rgba(255, 255, 255, 0.2)' },
+        },
+        
         fadeInExperience: {
           '0%': { opacity: '0', transform: 'scale(0.9)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
@@ -109,6 +115,9 @@ module.exports = {
         // ...
       },
       animation: {
+        animation: {
+          'white-glow': 'white-glow 3s ease-in-out infinite',
+        },
         fadeInExperience: 'fadeInExperience 0.5s ease-in forwards',
         fadeOutExperience: 'fadeOutExperience 0.5s ease-out forwards',
         'fadein-spin': 'fadein 0.5s ease-in forwards, spin 2s linear 0.5s forwards',
