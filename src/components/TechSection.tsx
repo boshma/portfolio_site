@@ -3,26 +3,29 @@ import { Icon } from "@iconify/react";
 import React, { useEffect, useState } from "react";
 
 const getTechClasses = (name: string) => {
-  const techToClassesMap: Record<string, {icon: string, text: string}> = {
+  const techToClassesMap: Record<string, { icon: string; text: string }> = {
     Tailwind: { icon: "icon-glow-blue", text: "text-color-blue" },
     React: { icon: "icon-glow-react", text: "text-color-react" },
     Prisma: { icon: "icon-glow-prisma", text: "text-color-prisma" },
     tRPC: { icon: "icon-glow-trpc", text: "text-color-trpc" },
-    PlanetScale: { icon: "icon-glow-planetscale", text: "text-color-planetscale" },
+    PlanetScale: {
+      icon: "icon-glow-planetscale",
+      text: "text-color-planetscale",
+    },
     "Next.js": { icon: "icon-glow-nextjs", text: "text-color-nextjs" },
     TypeScript: { icon: "icon-glow-typescript", text: "text-color-typescript" },
-    "Styled-Components": { icon: "icon-glow-styledcomponents", text: "text-color-styledcomponents" },
+    "Styled-Components": {
+      icon: "icon-glow-styledcomponents",
+      text: "text-color-styledcomponents",
+    },
   };
 
   return techToClassesMap[name] ?? { icon: "", text: "" };
 };
 
-
-
-
-type TechSectionProps = {
+interface TechSectionProps {
   className?: string; // Make className optional
-};
+}
 
 const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
   const [animate, setAnimate] = useState(false);
@@ -80,7 +83,7 @@ const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
             className="flex w-1/4 flex-col items-center p-4 sm:w-1/2 lg:w-1/4"
           >
             <div
-              className={`perspective-container border-16 flex items-center justify-center rounded-lg border-gray-400 p-4 lg:p-8 opacity-0 w-[80px] h-[80px] lg:w-[160px] lg:h-[160px] ${
+              className={`perspective-container border-16 flex h-[80px] w-[80px] items-center justify-center rounded-lg border-gray-400 p-4 opacity-0 lg:h-[160px] lg:w-[160px] lg:p-8 ${
                 animate
                   ? `animate-fadein-spin delay-${
                       (index % techItems.length) * 100
@@ -96,7 +99,9 @@ const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
                 className={`h-20 w-20 lg:h-40 lg:w-40 ${iconClass}`}
               />
             </div>
-            <p className={`mt-2 h-[25px] lg:h-[50px] text-center text-xs sm:text-lg lg:text-xl font-semibold leading-snug ${textClass}`}>
+            <p
+              className={`mt-2 h-[25px] text-center text-xs font-semibold leading-snug sm:text-lg lg:h-[50px] lg:text-xl ${textClass}`}
+            >
               {item.name}
             </p>
           </div>
