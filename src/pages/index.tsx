@@ -46,16 +46,16 @@ const Home = () => {
   }, []);
   const [navBottom, setNavBottom] = useState(true);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-      setNavBottom(scrollPosition < 10); // instead of scrollPosition === 0
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  //     setNavBottom(scrollPosition < 10); // instead of scrollPosition === 0
+  //   };
     
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   window.addEventListener('scroll', handleScroll, { passive: true });
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   return (
     <>
