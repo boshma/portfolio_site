@@ -28,10 +28,11 @@ const Home = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-      setNavBottom(scrollPosition === 0);
+      setNavBottom(scrollPosition < 10); // instead of scrollPosition === 0
     };
+    
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

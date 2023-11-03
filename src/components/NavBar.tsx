@@ -3,8 +3,10 @@ import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 
 const NavBar = ({ navBottom }: { navBottom: boolean }) => {
+  // If `navBottom` is true, position at the bottom, else position at the top.
   const navPosition = navBottom ? 'bottom-0' : 'top-0';
-  const bgColor = navBottom ? 'bg-transparent' : 'bg-gray-900';
+  // If `navBottom` is true, make the background transparent, else apply a solid background color.
+  const bgColor = navBottom ? 'bg-transparent' : 'bg-gray-900 shadow-md'; // Added shadow for better visibility
 
   return (
     <nav className={`fixed ${navPosition} left-0 w-full ${bgColor} text-white z-50 transition-all duration-300 ease-in-out`}>
