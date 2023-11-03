@@ -13,8 +13,8 @@ const ShowcaseSection = () => {
       </h2>
       <div className="flex flex-col md:flex-row justify-center">
         <div className="w-full md:w-1/2 p-4">
-          <p className="text-2xl md:text-4xl text-indigo-700 font-semibold mb-4">Fitness App!</p>
-          <ul className="text-xl md:text-2xl text-indigo-500 font-serif">
+          <p className="text-2xl md:text-4xl text-teal-100 font-semibold mb-4 ">Fitness App!</p>
+          <ul className="text-xl md:text-2xl text-green-100 font-serif icon-glow-react">
           <li> SSO auth/protected routes with Clerk
               <div className="relative w-full h-[200px] md:h-[400px]">
                 <Image src="/auth.jpg" alt="auth" layout="fill" objectFit="contain" />
