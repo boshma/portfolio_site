@@ -6,6 +6,8 @@ body {
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   // overflow: hidden;
   filter: drop-shadow(0 0 10px white);
+  z-index: 0; // Ensure this is behind other content
+  position: relative; 
 }
 
 @function random_range($min, $max) {
@@ -21,6 +23,7 @@ body {
   height: 10px;
   background: white;
   border-radius: 50%;
+  z-index: -1; 
 
   @for $i from 1 through $total {
     $random-x: random(1000000) * 0.0001vw;
