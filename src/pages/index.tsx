@@ -11,6 +11,28 @@ import Snow from "~/components/Snow";
 
 const Home = () => {
 
+    // State to determine if the device has a large screen
+    const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+    // Define your large screen width breakpoint, for example, 1440px (adjust based on your laptop screen width)
+    const largeScreenBreakpoint = 1440;
+  
+    useEffect(() => {
+      const updateScreenStatus = () => {
+        setIsMobile(window.innerWidth < mobileBreakpoint);
+        setIsLargeScreen(window.innerWidth > largeScreenBreakpoint);
+      };
+  
+      // Set the initial value
+      updateScreenStatus();
+  
+      // Add event listener for window resize
+      window.addEventListener('resize', updateScreenStatus);
+  
+      // Clean up event listener
+      return () => window.removeEventListener('resize', updateScreenStatus);
+    }, []);
+
     // State to determine if the device is considered mobile
     const [isMobile, setIsMobile] = useState(false);
 
@@ -62,7 +84,7 @@ const Home = () => {
       <HeaderSection />
       <div className="h-1 bg-white"></div>
       <div className="relative">
-      {!isMobile && <Snow documentHeight={documentHeight} />}
+      {!isMobile && !isLargeScreen && <Snow documentHeight={documentHeight} />}
         <div id="tech">
           <TechSection className="miasmic-blur" />
         </div>
