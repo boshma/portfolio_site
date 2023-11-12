@@ -44,6 +44,9 @@ const ShowcaseSection = () => {
           <p className="text-xl md:text-2xl font-semibold mb-4 text-blue-800">
             <a target="_blank" href="https://github.com/boshma" rel="noopener noreferrer">Check out my other projects in Kotlin, Java and Django</a>
           </p>
+          <p className="text-xl md:text-2xl font-semibold mb-4 text-blue-100">
+             I'm also looking for online clients looking to drop bodyfat or build muscle, send me an email at bogdan.shmat@wsu.edu if you're interested!
+          </p>
         </div>
       </div>
     </div>
