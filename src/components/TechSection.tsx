@@ -71,7 +71,7 @@ const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
     { icon: "logos:trpc", name: "tRPC" },
   ];
   return (
-    <div ref={techSectionRef} id="tech" className="flex flex-wrap p-8 md:mx-52">
+    <div ref={techSectionRef} id="tech" className="flex flex-wrap p-8 md:mx-52 font-pacifico">
       <h2 className="mb-8 w-full text-center text-4xl font-bold italic tracking-widest text-blue-600">
         My fav tech
       </h2>

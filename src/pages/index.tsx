@@ -83,10 +83,10 @@ const Home = () => {
 
       <HeaderSection />
       <div className="h-1 bg-white"></div>
-      <div className="relative">
+      <div className="relative" >
       {!isMobile && !isLargeScreen && <Snow documentHeight={documentHeight} />}
         <div id="tech">
-          <TechSection className="miasmic-blur" />
+          <TechSection className="miasmic-blur " />
         </div>
         
         <div id="experience">

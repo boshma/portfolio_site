@@ -6,7 +6,7 @@ const ContactSection: React.FC = () => {
   const iconSize = '4rem';
 
   return (
-    <div id="contact" className="container mx-auto text-center py-8 icon-glow-styledcomponents">
+    <div id="contact" className="container mx-auto text-center py-8 icon-glow-styledcomponents font-pacifico">
       <h2 className="text-4xl font-bold text-blue-600 mb-8 italic tracking-widest ">Let&apos;s Connect!</h2>
       <div className="flex justify-center">
         <a href="https://github.com/boshma" target="_blank" rel="noopener noreferrer" className="p-4 group">

@@ -15,7 +15,7 @@ const ExperienceSection = () => {
   ];
 
   const listItems = [
-    "Food: Sushi / Orange Chicken",
+    "Food: Ice cream",
     "Drink: Coffee w/ Almond Milk",
     "Movie: Dodgeball / LOTR",
     "TV Show: The Office",
@@ -30,7 +30,7 @@ const ExperienceSection = () => {
   });
 
   return (
-    <div id="experience" className="container mx-auto py-8 text-center">
+    <div id="experience" className="container mx-auto py-8 text-center font-pacifico">
       <h2 className="mb-8 text-4xl font-bold italic tracking-widest text-blue-600 icon-glow-planetscale">
         Experience
       </h2>

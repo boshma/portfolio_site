@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import type { FunctionComponent } from "react";
 
-const textList = ['AI', 'cybersecurity', 'web-dev',  'Space', 'running',  'warm beaches', 'movies', 'powerlifting', 'sunsets', 'hiking', 'mountains', 'pringles', ' fluffy cats'];
+const textList = ['ice cream', 'coffee', 'movies', 'saunas', 'peppermint'];
 
 interface TypingTextProps {
   className?: string;
@@ -41,7 +41,7 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
   }, [text, idx, direction, paused]);
 
   return (
-    <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-5xl leading-normal overflow-visible border-white whitespace-nowrap animate-blink-caret ${className}`}>
+    <h2 className={`font-pacifico text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-5xl leading-normal overflow-visible border-white whitespace-nowrap animate-blink-caret ${className}`}>
       <div className="inline-block relative">{text}</div>
       <span className="animate-blink inline-block w-2 h-full bg-white">|</span>
     </h2>
