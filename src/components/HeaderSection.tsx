@@ -22,11 +22,14 @@ const HeaderSection = () => {
   }, []);
 
   return (
-    <header className="text-white relative overflow-hidden">
+    <header className="text-white relative overflow-hidden bg-black">
       <div className="flex flex-col justify-between h-screen">
-      <div id="stars" className="absolute inset-0 z-10 w-full h-full"></div>
+      <div className="stars"></div>
+      <div className="twinkling"></div>
+      <div className="clouds"></div>
+      {/* <div id="stars" className="absolute inset-0 z-10 w-full h-full"></div>
       <div id="stars2" className="absolute inset-0 z-10 w-full h-full"></div>
-      <div id="stars3" className="absolute inset-0 z-10 w-full h-full"></div>
+      <div id="stars3" className="absolute inset-0 z-10 w-full h-full"></div> */}
       <div className="flex-grow flex justify-center items-center">
           <div 
             id="title" 
