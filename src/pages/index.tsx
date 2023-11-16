@@ -84,7 +84,7 @@ const Home = () => {
       <HeaderSection />
       <div className="h-1 bg-white"></div>
       <div className="relative" >
-      {!isMobile && <Snow documentHeight={documentHeight} />}
+      <Snow documentHeight={documentHeight} />
         <div id="tech">
           <TechSection className="miasmic-blur " />
         </div>
