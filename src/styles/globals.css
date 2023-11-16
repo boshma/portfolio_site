@@ -20,18 +20,18 @@
   }
 
   .stars {
-    background: url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
+    background: url('/stars.png') repeat top center;
     z-index: 0;
   }
 
   .twinkling {
-    background: url('https://www.script-tutorials.com/demos/360/images/twinkling.png') repeat top center;
+    background: url('/twinkling.png') repeat top center;
     z-index: 1;
     animation: move-twink-back 200s linear infinite;
   }
 
   .clouds {
-    background: url('http://www.script-tutorials.com/demos/360/images/clouds3.png') repeat top center;
+    background: url('/clouds3.png') repeat top center;
     z-index: 3;
     animation: move-clouds-back 200s linear infinite;
   }
