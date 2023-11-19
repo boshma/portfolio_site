@@ -4,7 +4,7 @@ import TypingText from '~/components/typingtext';
 import HeartSVG from '~/components/heartSVG';
 import NavBar from './NavBar';
 
-const HeaderSection = () => {
+const HeaderSection = ({ hasNavBar }: { hasNavBar: boolean }) => {
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
 
   useEffect(() => {
@@ -27,9 +27,6 @@ const HeaderSection = () => {
       <div className="stars"></div>
       <div className="twinkling"></div>
       <div className="clouds"></div>
-      {/* <div id="stars" className="absolute inset-0 z-10 w-full h-full"></div>
-      <div id="stars2" className="absolute inset-0 z-10 w-full h-full"></div>
-      <div id="stars3" className="absolute inset-0 z-10 w-full h-full"></div> */}
       <div className="flex-grow flex justify-center items-center">
           <div 
             id="title" 
@@ -44,7 +41,7 @@ const HeaderSection = () => {
             </div>
           </div>
         </div>
-        <NavBar navBottom={true} />
+        {hasNavBar ? <NavBar navBottom={true} /> : null}
       </div>
     </header>
   );

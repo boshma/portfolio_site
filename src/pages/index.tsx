@@ -10,49 +10,83 @@ import ContactSection from "~/components/ContactSection";
 import Snow from "~/components/Snow";
 
 const Home = () => {
+  const [isScrolledPastHeader, setIsScrolledPastHeader] = useState(false);
+  const [hasStoppedScrolling, setHasStoppedScrolling] = useState(true);
 
-    // State to determine if the device has a large screen
-    const [isLargeScreen, setIsLargeScreen] = useState(false);
+  // Header section height (update with actual height of your header)
+  const headerHeight = 800; // Example height in pixels
 
-    // Define your large screen width breakpoint, for example, 1440px (adjust based on your laptop screen width)
-    const largeScreenBreakpoint = 1440;
+  useEffect(() => {
+    let scrollTimeout: NodeJS.Timeout;
   
-    useEffect(() => {
-      const updateScreenStatus = () => {
-        setIsMobile(window.innerWidth < mobileBreakpoint);
-        setIsLargeScreen(window.innerWidth > largeScreenBreakpoint);
-      };
+    const handleScroll = () => {
+      const scrolledPastHeader = window.scrollY > headerHeight;
+      setIsScrolledPastHeader(scrolledPastHeader);
+      console.log("Scrolled past header:", scrolledPastHeader);
   
-      // Set the initial value
-      updateScreenStatus();
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        setHasStoppedScrolling(true);
+        console.log("Stopped scrolling");
+      }, 100); // Set delay for stop-scroll detection
   
-      // Add event listener for window resize
-      window.addEventListener('resize', updateScreenStatus);
+      if (!hasStoppedScrolling) {
+        setHasStoppedScrolling(false);
+        console.log("Scrolling...");
+      }
+    };
   
-      // Clean up event listener
-      return () => window.removeEventListener('resize', updateScreenStatus);
-    }, []);
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, [hasStoppedScrolling, headerHeight]);
+  
 
-    // State to determine if the device is considered mobile
-    const [isMobile, setIsMobile] = useState(false);
+  // State to determine if the device has a large screen
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-    // Define your mobile width breakpoint, for example 768px for tablets
-    const mobileBreakpoint = 768;
-  
-    useEffect(() => {
-      const updateMobileStatus = () => {
-        setIsMobile(window.innerWidth < mobileBreakpoint);
-      };
-  
-      // Set the initial value
-      updateMobileStatus();
-  
-      // Add event listener for window resize
-      window.addEventListener('resize', updateMobileStatus);
-  
-      // Clean up event listener
-      return () => window.removeEventListener('resize', updateMobileStatus);
-    }, []);
+  // Define your large screen width breakpoint, for example, 1440px (adjust based on your laptop screen width)
+  const largeScreenBreakpoint = 1440;
+
+  useEffect(() => {
+    const updateScreenStatus = () => {
+      setIsMobile(window.innerWidth < mobileBreakpoint);
+      setIsLargeScreen(window.innerWidth > largeScreenBreakpoint);
+    };
+
+    // Set the initial value
+    updateScreenStatus();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", updateScreenStatus);
+
+    // Clean up event listener
+    return () => window.removeEventListener("resize", updateScreenStatus);
+  }, []);
+
+  // State to determine if the device is considered mobile
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Define your mobile width breakpoint, for example 768px for tablets
+  const mobileBreakpoint = 768;
+
+  useEffect(() => {
+    const updateMobileStatus = () => {
+      setIsMobile(window.innerWidth < mobileBreakpoint);
+    };
+
+    // Set the initial value
+    updateMobileStatus();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", updateMobileStatus);
+
+    // Clean up event listener
+    return () => window.removeEventListener("resize", updateMobileStatus);
+  }, []);
   const [documentHeight, setDocumentHeight] = useState(0);
 
   useEffect(() => {
@@ -61,13 +95,12 @@ const Home = () => {
       setDocumentHeight(document.documentElement.scrollHeight);
     };
 
-    window.addEventListener('resize', updateHeight);
+    window.addEventListener("resize", updateHeight);
     updateHeight(); // Initial call to set height
 
-    return () => window.removeEventListener('resize', updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
   }, []);
   const [navBottom, setNavBottom] = useState(true);
-
 
   return (
     <>
@@ -80,15 +113,17 @@ const Home = () => {
         />
         <link rel="icon" href="/flag-ukraine.svg" type="image/svg+xml" />
       </Head>
-
-      <HeaderSection />
+      {!hasStoppedScrolling || isScrolledPastHeader ? (
+      <NavBar navBottom={false} />
+    ) : null}
+      <HeaderSection hasNavBar={hasStoppedScrolling && !isScrolledPastHeader} />
       <div className="h-1 bg-white"></div>
-      <div className="relative" >
-      <Snow documentHeight={documentHeight} />
+      <div className="relative">
+        <Snow documentHeight={documentHeight} />
         <div id="tech">
           <TechSection className="miasmic-blur " />
         </div>
-        
+
         <div id="experience">
           <ExperienceSection />
         </div>

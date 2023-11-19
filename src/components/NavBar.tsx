@@ -1,15 +1,19 @@
 // src/components/NavBar.tsx
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 
 const NavBar = ({ navBottom }: { navBottom: boolean }) => {
-  // If `navBottom` is true, position at the bottom, else position at the top.
-  const navPosition = navBottom ? 'bottom-0' : 'top-0';
-  // If `navBottom` is true, make the background transparent, else apply a solid background color.
-  const bgColor = navBottom ? 'bg-transparent' : 'bg-gray-900 shadow-md'; // Added shadow for better visibility
+  const navStyle: CSSProperties = {
+    position: 'sticky',
+    top: navBottom ? 'unset' : 0,  // 'unset' will allow the navbar to use the bottom property
+    bottom: navBottom ? 0 : 'unset', // When navBottom is true, stick to bottom of HeaderSection
+    backgroundColor: 'transparent',
+    zIndex: 50,
+    color: 'white',
+  };
 
   return (
-    <nav className={`sticky ${navPosition} left-0 w-full ${bgColor} text-white z-50 transition-all duration-300 ease-in-out`}>
+    <nav style={navStyle}>
       <div className="container mx-auto font-pacifico">
         <ul className="flex justify-around py-4 space-x-2">
           <li className="cursor-pointer"><ScrollLink to="tech" smooth={true}>Tech</ScrollLink></li>
