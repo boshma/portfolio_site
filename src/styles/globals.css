@@ -7,7 +7,32 @@
 
 
 @layer base {
-  .stars, .twinkling, .clouds {
+
+/* Custom hover effect for scroll links */
+.scroll-link {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.scroll-link::after {
+  content: '';
+  position: absolute;
+  height: 2px; /* Line thickness */
+  background-color: white; /* Line color */
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition: width 1s ease; /* Animation for the line */
+}
+
+.scroll-link:hover::after {
+  width: 100%; /* Full width on hover */
+}
+
+  .stars,
+  .twinkling,
+  .clouds {
     /* Common styles for all layers */
     position: absolute;
     top: 0;
@@ -38,14 +63,25 @@
 
   /* Add keyframes for animations */
   @keyframes move-twink-back {
-    from { background-position: 0 0; }
-    to { background-position: -10000px 5000px; }
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: -10000px 5000px;
+    }
   }
 
   @keyframes move-clouds-back {
-    from { background-position: 0 0; }
-    to { background-position: 10000px 0; }
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: 10000px 0;
+    }
   }
+
   .perspective-container {
     perspective: 1000px;
     width: 100%;
@@ -58,7 +94,8 @@
   /* Utility Layer */
   @layer utilities {
     .label-glow {
-      color: white; /* White text color */
+      color: white;
+      /* White text color */
       animation: white-glow 2s infinite alternate;
     }
 
@@ -195,20 +232,23 @@
     0% {
       text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
     }
+
     50% {
       text-shadow: 0 0 16px rgba(255, 255, 255, 0.5);
     }
+
     100% {
       text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
     }
   }
-  
+
 
 
 
   :root {
 
-    --glow-color-white: #ffffff; /* white color for the glow effect */
+    --glow-color-white: #ffffff;
+    /* white color for the glow effect */
 
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;

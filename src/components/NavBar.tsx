@@ -26,10 +26,10 @@ const NavBar = ({ navBottom, visible }: { navBottom: boolean, visible: boolean }
     <nav style={navStyle}  className={navClasses}>
       <div className="container mx-auto font-pacifico">
         <ul className="flex justify-around py-4 space-x-2">
-          <li className="cursor-pointer"><ScrollLink to="tech" smooth={true}>Tech</ScrollLink></li>
-          <li className="cursor-pointer"><ScrollLink to="experience" smooth={true}>Experience</ScrollLink></li>
-          <li className="cursor-pointer"><ScrollLink to="showcase" smooth={true}>Showcase</ScrollLink></li>
-          <li className="cursor-pointer"><ScrollLink to="contact" smooth={true}>Contact</ScrollLink></li>
+          <li className="cursor-pointer"><ScrollLink to="tech" smooth={true} className="scroll-link">Tech</ScrollLink></li>
+          <li className="cursor-pointer"><ScrollLink to="experience" smooth={true} className="scroll-link">Experience</ScrollLink></li>
+          <li className="cursor-pointer"><ScrollLink to="showcase" smooth={true} className="scroll-link">Showcase</ScrollLink></li>
+          <li className="cursor-pointer"><ScrollLink to="contact" smooth={true} className="scroll-link">Contact</ScrollLink></li>
         </ul>
       </div>
     </nav>
