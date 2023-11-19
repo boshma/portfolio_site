@@ -1,7 +1,7 @@
 // src/pages/index.tsx
 import Head from "next/head";
 import NavBar from "~/components/NavBar";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import TechSection from "~/components/TechSection";
 import HeaderSection from "~/components/HeaderSection";
 import ExperienceSection from "~/components/ExperienceSection";
@@ -10,6 +10,8 @@ import ContactSection from "~/components/ContactSection";
 import Snow from "~/components/Snow";
 
 const Home = () => {
+  const headerRef = useRef<HTMLDivElement>(null);
+
   const [isScrolledPastHeader, setIsScrolledPastHeader] = useState(false);
   const [hasStoppedScrolling, setHasStoppedScrolling] = useState(true);
 
@@ -18,32 +20,37 @@ const Home = () => {
 
   useEffect(() => {
     let scrollTimeout: NodeJS.Timeout;
-  
+
     const handleScroll = () => {
+      // Ensure the ref is current and the element exists
+      if (headerRef.current) {
+        const headerBottom = headerRef.current.getBoundingClientRect().bottom;
+        const scrolledPastHeader = headerBottom < 0;
+        setIsScrolledPastHeader(scrolledPastHeader);
+      }
       const scrolledPastHeader = window.scrollY > headerHeight;
       setIsScrolledPastHeader(scrolledPastHeader);
       console.log("Scrolled past header:", scrolledPastHeader);
-  
+
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         setHasStoppedScrolling(true);
         console.log("Stopped scrolling");
       }, 100); // Set delay for stop-scroll detection
-  
+
       if (!hasStoppedScrolling) {
         setHasStoppedScrolling(false);
         console.log("Scrolling...");
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       clearTimeout(scrollTimeout);
     };
-  }, [hasStoppedScrolling, headerHeight]);
-  
+  }, [headerRef, hasStoppedScrolling]);
 
   // State to determine if the device has a large screen
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -114,8 +121,8 @@ const Home = () => {
         <link rel="icon" href="/flag-ukraine.svg" type="image/svg+xml" />
       </Head>
       {!hasStoppedScrolling || isScrolledPastHeader ? (
-      <NavBar navBottom={false} />
-    ) : null}
+        <NavBar navBottom={false} />
+      ) : null}
       <HeaderSection hasNavBar={hasStoppedScrolling && !isScrolledPastHeader} />
       <div className="h-1 bg-white"></div>
       <div className="relative">

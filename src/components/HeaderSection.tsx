@@ -1,10 +1,11 @@
 // src/components/HeaderSection.tsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import TypingText from '~/components/typingtext';
 import HeartSVG from '~/components/heartSVG';
 import NavBar from './NavBar';
 
 const HeaderSection = ({ hasNavBar }: { hasNavBar: boolean }) => {
+  const headerRef = useRef<HTMLDivElement>(null);
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
 
   useEffect(() => {
@@ -22,7 +23,7 @@ const HeaderSection = ({ hasNavBar }: { hasNavBar: boolean }) => {
   }, []);
 
   return (
-    <header className="text-white relative overflow-hidden bg-black">
+    <header ref={headerRef} className="text-white relative overflow-hidden bg-black">
       <div className="flex flex-col justify-between h-screen">
       <div className="stars"></div>
       <div className="twinkling"></div>

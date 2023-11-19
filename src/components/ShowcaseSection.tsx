@@ -6,46 +6,45 @@ const ShowcaseSection = () => {
   return (
     <div id="showcase" className="container mx-auto text-center py-8">
       <h2 className="text-3xl md:text-6xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
-        <a target="_blank" href="https://www.nutrifit.dev/" rel="noopener noreferrer">NutriFit</a>
+        <a target="_blank" href="https://www.nutrifit.dev/" rel="noopener noreferrer">Meal/Excercise Logger Web-App</a>
       </h2>
       <h2 className="text-2xl md:text-4xl font-bold text-blue-400 mb-4 italic tracking-widest">
         (TypeScript, Next.js, React, Prisma, PlanetScale, Trpc, Shadcn, Tailwind.css, Clerk)
       </h2>
-      <div className="flex flex-col md:flex-row justify-center font-pacifico">
-        <div className="w-full md:w-1/2 p-4 ">
-          <p className="text-2xl md:text-4xl text-teal-100 font-semibold mb-4 ">Fitness App!</p>
-          <ul className="text-xl md:text-2xl text-green-100 font-serif icon-glow-react ">
-          <li> SSO auth/protected routes with Clerk
-              <div className="relative w-full h-[200px] md:h-[400px]">
-                <Image src="/auth.jpg" alt="auth" layout="fill" objectFit="contain" />
-              </div>
-            </li>
-            <li className = "">Quick add meals
-              <div className="relative w-full h-[200px] md:h-[400px]">
-                <Image src="/quickadd.jpg" alt="Quick add" layout="fill" objectFit="contain" />
-              </div>
-            </li>
-            <li>Save meals to your collection and add from there!
-              <div className="relative w-full h-[200px] md:h-[400px]">
-                <Image src="/addfromcoll.jpg" alt="Add from Collection" layout="fill" objectFit="contain" />
-              </div>
-            </li>
-            <li>Add meals from nutritionix database
-              <div className="relative w-full h-[200px] md:h-[400px]">
-                <Image src="/nutritionix.jpg" alt="Add from Nutritionix" layout="fill" objectFit="contain" />
-              </div>
-            </li>
-            <li>Track your workouts and meals!
-              <div className="relative w-full h-[200px] md:h-[400px]">
-                <Image src="/meallog.jpg" alt="Meal Log" layout="fill" objectFit="contain" />
-              </div>
-            </li>
-          </ul>
-          <p className="text-xl md:text-2xl font-semibold mb-4 text-blue-800 font-pacifico mt-4">
-            <a target="_blank" href="https://github.com/boshma" rel="noopener noreferrer">Check out my other projects in Kotlin, Java and Django</a>
-          </p>
-        </div>
-      </div>
+      <h2 className="text-3xl md:text-6xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
+        <a target="_blank" href="https://github.com/boshma/FitnessAppKotlin" rel="noopener noreferrer">Meal/Excercise Logger Mobile</a>
+      </h2>
+      <h2 className="text-2xl md:text-4xl font-bold text-blue-400 mb-4 italic tracking-widest">
+        (Kotlin, BCrypt, Room)
+      </h2>
+      <h2 className="text-3xl md:text-6xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
+        <a target="_blank" href="https://github.com/boshma/FitnessCommunity" rel="noopener noreferrer">Discord Clone</a>
+      </h2>
+      <h2 className="text-2xl md:text-4xl font-bold text-blue-400 mb-4 italic tracking-widest">
+        (Django, Python, JavaScript, CSS, sqlite3)
+      </h2>
+
+      <h2 className="text-3xl md:text-6xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
+        <a target="_blank" href="https://github.com/boshma/Checkers-Kotlin-" rel="noopener noreferrer">Checkers!</a>
+      </h2>
+      <h2 className="text-2xl md:text-4xl font-bold text-blue-400 mb-4 italic tracking-widest">
+        (Kotlin, Room)
+      </h2>
+
+      <h2 className="text-3xl md:text-6xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
+        <a target="_blank" href="https://github.com/boshma/APOD-kotlin-" rel="noopener noreferrer">APOD - astronomy pic of the day</a>
+      </h2>
+      <h2 className="text-2xl md:text-4xl font-bold text-blue-400 mb-4 italic tracking-widest">
+        (Kotlin, Glide, APOD API)
+      </h2>
+
+      <h2 className="text-3xl md:text-6xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
+        <a target="_blank" href="https://github.com/boshma/Ball-Game-" rel="noopener noreferrer">Silly Ball Game</a>
+      </h2>
+      <h2 className="text-2xl md:text-4xl font-bold text-blue-400 mb-4 italic tracking-widest">
+        (Java, JavaFX)
+      </h2>
+
     </div>
   );
 };
