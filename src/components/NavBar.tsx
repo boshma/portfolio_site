@@ -2,18 +2,28 @@
 import React, { CSSProperties } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 
-const NavBar = ({ navBottom }: { navBottom: boolean }) => {
+const NavBar = ({ navBottom, visible }: { navBottom: boolean, visible: boolean }) => {
   const navStyle: CSSProperties = {
     position: 'sticky',
-    top: navBottom ? 'unset' : 0,  // 'unset' will allow the navbar to use the bottom property
-    bottom: navBottom ? 0 : 'unset', // When navBottom is true, stick to bottom of HeaderSection
+    top: navBottom ? 'unset' : 0, 
+    bottom: navBottom ? 0 : 'unset',
     backgroundColor: 'transparent',
     zIndex: 50,
     color: 'white',
+    opacity: visible ? 1 : 0,
+    visibility: visible ? 'visible' : 'hidden',
+    // Use maxHeight for transition instead of height to accommodate variable content height
+    maxHeight: visible ? '100px' : '0', // Adjust 'px' as needed
+    overflow: 'hidden', // Prevent content overflow during transition
+    transition: 'opacity 500ms ease-in-out, visibility 500ms ease-in-out, maxHeight 500ms ease-in-out',
   };
 
+
+   // Apply classes conditionally based on the `visible` prop
+   const navClasses = `transition-opacity duration-500 ease-in-out ${visible ? 'opacity-100' : 'opacity-0'}`;
+
   return (
-    <nav style={navStyle}>
+    <nav style={navStyle}  className={navClasses}>
       <div className="container mx-auto font-pacifico">
         <ul className="flex justify-around py-4 space-x-2">
           <li className="cursor-pointer"><ScrollLink to="tech" smooth={true}>Tech</ScrollLink></li>

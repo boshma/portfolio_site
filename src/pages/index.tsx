@@ -121,8 +121,10 @@ const Home = () => {
         <link rel="icon" href="/flag-ukraine.svg" type="image/svg+xml" />
       </Head>
       {!hasStoppedScrolling || isScrolledPastHeader ? (
-        <NavBar navBottom={false} />
-      ) : null}
+        <NavBar navBottom={false} visible={true} /> // Set visible to true
+      ) : (
+        <NavBar navBottom={false} visible={false} /> // Set visible to false
+      )}
       <HeaderSection hasNavBar={hasStoppedScrolling && !isScrolledPastHeader} />
       <div className="h-1 bg-white"></div>
       <div className="relative">
