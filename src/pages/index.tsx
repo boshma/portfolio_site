@@ -118,7 +118,7 @@ const Home = () => {
           name="description"
           content="Bogdan Shmat - Software Engineer - Washington State University ."
         />
-        <link rel="icon" href="/washington-state-cougars-2.svg" type="image/svg+xml" />
+        <link rel="icon" href="/flag-ukraine.svg" type="image/svg+xml" />
       </Head>
       {!hasStoppedScrolling || isScrolledPastHeader ? (
         <NavBar navBottom={false} visible={true} /> // Set visible to true
