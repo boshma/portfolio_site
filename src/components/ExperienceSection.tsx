@@ -15,13 +15,12 @@ const ExperienceSection = () => {
   ];
 
   const listItems = [
-    "Food: Ice cream",
-    "Drink: Coffee w/ Almond Milk",
-    "Movie: Dodgeball / LOTR",
-    "TV Show: The Office",
-    "Music: Basically everything",
-    "Book: The Inheritance Cycle",
-    "Vacation: Cancun",
+    "Ice Cream: Ben and Jerrys",
+    "Game: Oldschool Runescape",
+    "Show: The Big Bang Theory",
+    "Food: Chicken",
+    "Drink: Coffee",
+    "Movie: Talk To Me",
   ];
 
   const [ref, inView] = useInView({
