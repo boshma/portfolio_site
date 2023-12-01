@@ -21,7 +21,6 @@ const ExperienceSection = () => {
     "Food: Chicken",
     "Drink: Coffee",
     "Movie: Talk To Me",
-    "Music: Hiphop/Alternative/Indie"
   ];
 
   const [ref, inView] = useInView({
