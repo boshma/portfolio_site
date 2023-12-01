@@ -15,12 +15,13 @@ const ExperienceSection = () => {
   ];
 
   const listItems = [
-    "Ice Cream: Ben and Jerrys",
+    "Ben & Jerrys: Netflix and chill'd (non-dairy)",
     "Game: Oldschool Runescape",
     "Show: The Big Bang Theory",
     "Food: Chicken",
     "Drink: Coffee",
     "Movie: Talk To Me",
+    "Music: Hiphop/Alternative/Indie"
   ];
 
   const [ref, inView] = useInView({
