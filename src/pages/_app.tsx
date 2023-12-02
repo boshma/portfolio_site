@@ -6,6 +6,7 @@ import '../styles/snow.scss';
 import '~/styles/christmas-lights.scss';
 
 
+
 const MyApp: AppType = ({ Component, pageProps }) => {
   return <Component {...pageProps} />;
 };
