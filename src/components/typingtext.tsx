@@ -44,7 +44,8 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
   return (
     <h2 className={`font-pacifico text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-5xl leading-normal overflow-visible border-white whitespace-nowrap animate-blink-caret ${className}`}>
       <div className="inline-block relative"><ChristmasLights text={text} /></div>
-      <span className="animate-blink inline-block w-4 h-full bg-white">|</span>
+      <span className="animate-blink inline-block w-4 h-full bg-white">
+        <ChristmasLights text='|'/></span>
     </h2>
   );
 };

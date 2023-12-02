@@ -116,7 +116,7 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Bogdan Shmat - Software Engineer - Washington State University ."
+          content="Bogdan Shmat - Software Engineering Student - Washington State University ."
         />
         <link rel="icon" href="/sweetlogo.svg" type="image/svg+xml" />
       </Head>
