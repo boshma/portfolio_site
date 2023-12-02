@@ -10,17 +10,20 @@ const ExperienceSection = () => {
     },
     {
       title: "Work experience",
-      text: "During my 3 month summer internship at Invent, I was part of a team of engineers and product managers that utilized micro-frontends to help build PWAs for financial clients using TypeScript, React, Styled-Components, Effector, and RTL/Jest.",
+      text: "During my 3 month summer internship at Invent, I was part of a team of engineers and product managers that utilized micro-frontends to help work on UI's for PWAs used by financial clients. My stack consisted of TypeScript, React, Styled-Components, Effector, and RTL/Jest.",
     },
   ];
 
   const listItems = [
-    "Ben & Jerrys: Netflix and chill'd (non-dairy)",
+    "Ice Cream: Ben And Jerrys Half Baked PB",
     "Game: Oldschool Runescape",
     "Show: The Big Bang Theory",
     "Food: Chicken",
     "Drink: Coffee",
-    "Movie: Talk To Me",
+    "Movie: 30 Days Of Night",
+    "Anime: Attack On Titan",
+    "Book: Harry Potter series",
+    "Music: EDM, Rap, Rock, Pop, Country",
   ];
 
   const [ref, inView] = useInView({
