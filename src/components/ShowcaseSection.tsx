@@ -1,9 +1,13 @@
 // src/components/ShowcaseSection.tsx
 import React from 'react';
-import Image from 'next/image';
+import ChristmasLights from './ChristmasLights';
 
 const ShowcaseSection = () => {
   return (
+
+    <>
+      <h2 className="mb-8 text-center text-4xl font-bold italic tracking-widest text-blue-600 icon-glow-planetscale ">Showcase</h2>
+
     <div id="showcase" className="container mx-auto text-center py-8">
       <h2 className="text-3xl md:text-6xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
         <a target="_blank" href="https://www.nutrifit.dev/" rel="noopener noreferrer">Meal/Excercise Logger Web-App</a>
@@ -37,6 +41,7 @@ const ShowcaseSection = () => {
       <h2 className="text-2xl md:text-4xl font-bold text-blue-400 mb-4 italic tracking-widest">
         (Kotlin, Glide, APOD API)
       </h2>
+      
 
       <h2 className="text-3xl md:text-6xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
         <a target="_blank" href="https://github.com/boshma/Ball-Game-" rel="noopener noreferrer">Silly Ball Game</a>
@@ -46,6 +51,7 @@ const ShowcaseSection = () => {
       </h2>
 
     </div>
+    </>
   );
 };
 

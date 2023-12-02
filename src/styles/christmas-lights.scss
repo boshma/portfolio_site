@@ -1,0 +1,38 @@
+// src/styles/christmas-lights.scss
+
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Frijole');
+
+@mixin twinkle-color($color) {
+  color: mix($color, #FFF, 25%);
+  text-shadow: 0 0 15px $color, 0 0 25px $color;
+}
+
+.header-title {
+  text-align: center;
+  margin: 1em;
+  padding: 0;
+  font-size: 47px;
+  text-transform: uppercase;
+  font-family: 'Fredericka the Great', 'Frijole';
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1em;
+  // If you want the color effect to be applied as described in the mixin,
+  // you can extend the .lights classes later with this mixin or apply it to .header-title
+}
+
+$i: 1;
+@while $i < 8 {
+  .lights-#{$i} {
+    animation: twinkle #{$i}s infinite;
+  }
+  $i: $i + 1;
+}
+
+@keyframes twinkle {
+  0%, 100% { @include twinkle-color(#ff0040); }
+  20% { @include twinkle-color(#8c00ff); }
+  40% { @include twinkle-color(#00a6ff); }
+  60% { @include twinkle-color(#00ff26); }
+  80% { @include twinkle-color(#ffee00); }
+}
