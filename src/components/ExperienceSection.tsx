@@ -20,7 +20,7 @@ const ExperienceSection = () => {
     "Show: The Big Bang Theory",
     "Food: Chicken",
     "Drink: Coffee",
-    "Movie: 30 Days Of Night",
+    "Genre: Horror",
     "Anime: Attack On Titan",
     "Book: Harry Potter series",
     "Music: EDM, Rap, Rock, Pop, Country",
