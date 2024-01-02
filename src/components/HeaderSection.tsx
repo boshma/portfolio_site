@@ -38,7 +38,7 @@ const HeaderSection = ({ hasNavBar }: { hasNavBar: boolean }) => {
             className="absolute z-20 w-full text-center"
           >
               <h1 className="header-title text-gray-100">
-                Hey, I'm Bogdan
+              Hey, I&apos;m Bogdan
               </h1>
             <div className="mt-4 flex items-center justify-center">
               <h2 className="mr-2 text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl text-gray-100">
