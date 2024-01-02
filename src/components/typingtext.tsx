@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import type { FunctionComponent } from "react";
 import ChristmasLights from "./ChristmasLights";
 
-const textList = ['smoothies', 'warm weather', 'ice cream', 'running', 'movies', 'cooking', 'hiking' ];
+const textList = ['ice cream', 'web dev', 'walks', 'podcasts', 'running', 'hikes', 'baking'];
 
 interface TypingTextProps {
   className?: string;
@@ -42,10 +42,9 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
   }, [text, idx, direction, paused]);
 
   return (
-    <h2 className={`font-pacifico text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-5xl leading-normal overflow-visible border-white whitespace-nowrap animate-blink-caret ${className}`}>
-      <div className="inline-block relative"><ChristmasLights text={text} /></div>
-      <span className="animate-blink inline-block w-4 h-full bg-white">
-        <ChristmasLights text='|'/></span>
+    <h2 className={`font-pacifico text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-5xl leading-normal overflow-visible border-white whitespace-nowrap animate-blink-caret text-gray-100 ${className}`}>
+      <div className="inline-block relative">{text}</div>
+      <span className="animate-blink inline-block w-4 h-full bg-white">|</span>
     </h2>
   );
 };
