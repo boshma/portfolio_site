@@ -15,7 +15,7 @@ const ContactSection: React.FC = () => {
         <a href="https://www.linkedin.com/in/bogdan-shmat-b42552222/" target="_blank" rel="noopener noreferrer" className="p-4 group">
           <Icon icon="devicon:linkedin" style={{ fontSize: iconSize }} />
         </a>
-        <a href="https://www.strava.com/athletes/YOUR_STRAVA_PROFILE_ID" target="_blank" rel="noopener noreferrer" className="p-4 group">
+        <a href="https://www.strava.com/athletes/130580935" target="_blank" rel="noopener noreferrer" className="p-4 group">
           <Icon icon="bi:strava" style={{ fontSize: iconSize }} />
         </a>
         <div className="p-4 group relative">
