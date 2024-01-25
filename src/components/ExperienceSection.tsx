@@ -15,12 +15,9 @@ const ExperienceSection = () => {
   ];
 
   const listItems = [
-    "Dessert: Peanut Butter Cookies",
-    "Game: Oldschool Runescape",
-    "Show: The Big Bang Theory",
+    "Dessert: Ben & Jerries",
+    "Show: The Office",
     "Drink: Coffee",
-    "Genre: Horror",
-    "Anime: Attack On Titan",
     "Book: Harry Potter series",
     "Music: EDM, Rap, Rock, Pop, Country",
   ];
