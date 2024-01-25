@@ -6,7 +6,7 @@ const ExperienceSection = () => {
   const sections = [
     {
       title: "About me",
-      text: "I love spending time with friends, being outdoors, watching movies, staying healthy, and pursuing my goals. I'm a senior at Washington State University studying Software Engineering, and my dream is to become a Partner/Dist. Engineer at a top tech company. ",
+      text: "I love spending time with friends, being outdoors, watching movies, staying healthy, and pursuing my goals. I'm a senior at Washington State University studying Software Engineering graduating in Spring of 2024",
     },
     {
       title: "Work experience",
