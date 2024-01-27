@@ -19,7 +19,8 @@ const ExperienceSection = () => {
     "Show: The Office",
     "Drink: Coffee",
     "Book: Harry Potter series",
-    "Fav Podcaster: Andrew Huberman" ,
+    "Pet: cat", 
+    "Movie: Talladega Nights"
   ];
 
   const [ref, inView] = useInView({
