@@ -6,7 +6,7 @@ const ExperienceSection = () => {
   const sections = [
     {
       title: "About me",
-      text: "I love spending time with friends, being outdoors, watching movies, staying healthy, and pursuing my goals. I'm a senior at Washington State University studying Software Engineering graduating in Spring of 2024",
+      text: "I love spending time with friends, being outdoors, watching movies, staying healthy, and pursuing my goals. I'm a senior at Washington State University studying Software Engineering graduating in Spring of 2024. My dream position would involve working with technology and other people.",
     },
     {
       title: "Work experience",
@@ -15,11 +15,11 @@ const ExperienceSection = () => {
   ];
 
   const listItems = [
-    "Dessert: Ben & Jerries",
+    "Dessert: Ice Cream",
     "Show: The Office",
     "Drink: Coffee",
     "Book: Harry Potter series",
-    "Music: EDM, Rap, Rock, Pop, Country",
+    "Fav Podcaster: Andrew Huberman" ,
   ];
 
   const [ref, inView] = useInView({
