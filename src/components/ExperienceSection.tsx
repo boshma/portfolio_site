@@ -17,7 +17,7 @@ const ExperienceSection = () => {
   const listItems = [
     "Dessert: Ice Cream",
     "Show: The Office",
-    "Drink: Coffee",
+    "Drink: Kefir",
     "Book: Harry Potter series",
     "Pet: cat", 
     "Movie: Talladega Nights",
