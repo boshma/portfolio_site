@@ -112,7 +112,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Bogdan Shmat </title>
+        <title>Bogdan Shmat</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
