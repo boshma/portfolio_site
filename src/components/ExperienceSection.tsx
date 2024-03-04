@@ -21,7 +21,8 @@ const ExperienceSection = () => {
     "Book: Harry Potter series",
     "Pet: cat", 
     "Movie: Talladega Nights",
-    "Language: JavaScript"
+    "Language: JavaScript",
+    "Snack: Frozen Blueberries"
 
   ];
 
