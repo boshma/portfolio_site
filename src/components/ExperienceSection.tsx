@@ -22,8 +22,6 @@ const ExperienceSection = () => {
     "Pet: cat", 
     "Movie: Talladega Nights",
     "Language: JavaScript",
-    "Snack: Frozen Blueberries"
-
   ];
 
   const [ref, inView] = useInView({
