@@ -6,7 +6,7 @@ const ExperienceSection = () => {
   const sections = [
     {
       title: "About me",
-      text: "I graduated from Washington State University with a degree in Software Engineering. I have a passion for full stack development and have experience with TypeScript, React, Node.js.",
+      text: "I graduated from Washington State University with a degree in Software Engineering. I have a passion for full stack development and have experience with TypeScript, React, and Node.js.",
     },
     {
       title: "Work experience",
@@ -15,9 +15,8 @@ const ExperienceSection = () => {
   ];
 
   const listItems = [
-    "Dessert: Ice Cream",
-    "Show: The Office",
-    "Drink: Hot Cocoa",
+    "Food: Ice Cream",
+    "Show: Southpark",
     "Book: Harry Potter series",
     "Pet: cat", 
     "Movie: Talladega Nights",
