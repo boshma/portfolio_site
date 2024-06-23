@@ -16,6 +16,10 @@
   display: inline-block;
 }
 
+.icon-color-white {
+  color: white;
+}
+
 .scroll-link::after {
   content: '';
   position: absolute;

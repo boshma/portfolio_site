@@ -1,4 +1,3 @@
-//src/components/TechSection.tsx
 import { Icon } from "@iconify/react";
 import React, { useEffect, useState } from "react";
 
@@ -6,12 +5,9 @@ const getTechClasses = (name: string) => {
   const techToClassesMap: Record<string, { icon: string; text: string }> = {
     Tailwind: { icon: "icon-glow-blue", text: "text-color-blue" },
     React: { icon: "icon-glow-react", text: "text-color-react" },
-    Prisma: { icon: "icon-glow-prisma", text: "text-color-prisma" },
-    tRPC: { icon: "icon-glow-trpc", text: "text-color-trpc" },
-    PlanetScale: {
-      icon: "icon-glow-planetscale",
-      text: "text-color-planetscale",
-    },
+    Sentry: { icon: "icon-color-white", text: "text-color-white" },
+    PostHog: { icon: "icon-glow-posthog", text: "text-color-posthog" },
+    DrizzleORM: { icon: "icon-glow-drizzleorm", text: "text-color-drizzleorm" },
     "Next.js": { icon: "icon-glow-nextjs", text: "text-color-nextjs" },
     TypeScript: { icon: "icon-glow-typescript", text: "text-color-typescript" },
     "Styled-Components": {
@@ -24,7 +20,7 @@ const getTechClasses = (name: string) => {
 };
 
 interface TechSectionProps {
-  className?: string; // Make className optional
+  className?: string;
 }
 
 const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
@@ -46,7 +42,7 @@ const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
       },
       {
         root: null,
-        threshold: 0.1, // Adjust the threshold as needed
+        threshold: 0.1,
       }
     );
 
@@ -60,16 +56,19 @@ const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
       }
     };
   }, []);
+  
   const techItems = [
     { icon: "logos:react", name: "React" },
     { icon: "skill-icons:styledcomponents", name: "Styled-Components" },
-    { icon: "logos:planetscale", name: "PlanetScale" },
+    { icon: "/drizzleORMicon.png", name: "DrizzleORM" }, 
     { icon: "devicon:tailwindcss", name: "Tailwind" },
     { icon: "logos:nextjs-icon", name: "Next.js" },
-    { icon: "vscode-icons:file-type-light-prisma", name: "Prisma" },
+    { icon: "simple-icons:sentry", name: "Sentry" },
     { icon: "logos:typescript-icon", name: "TypeScript" },
-    { icon: "logos:trpc", name: "tRPC" },
+    { icon: "logos:posthog", name: "PostHog" },
   ];
+
+
   return (
     <div ref={techSectionRef} id="tech" className="flex flex-wrap p-8 md:mx-52 font-pacifico">
       <h2 className="mb-8 w-full text-center text-4xl font-bold italic tracking-widest text-blue-600">
@@ -94,10 +93,18 @@ const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
                 animationDelay: `${index * 180}ms`,
               }}
             >
-              <Icon
-                icon={item.icon}
-                className={`h-20 w-20 lg:h-40 lg:w-40 ${iconClass}`}
-              />
+              {item.name === "DrizzleORM" ? (
+                <img
+                  src={item.icon}
+                  alt={item.name}
+                  className={`h-20 w-auto lg:h-34 lg:w-auto drizzle-icon`} 
+                />
+              ) : (
+                <Icon
+                  icon={item.icon}
+                  className={`h-20 w-20 lg:h-40 lg:w-40 ${iconClass}`}
+                />
+              )}
             </div>
             <p
               className={`mt-2 h-[25px] text-center text-xs font-semibold leading-snug sm:text-lg lg:h-[50px] lg:text-xl ${textClass}`}
