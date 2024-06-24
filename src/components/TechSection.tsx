@@ -10,10 +10,7 @@ const getTechClasses = (name: string) => {
     DrizzleORM: { icon: "icon-glow-drizzleorm", text: "text-color-drizzleorm" },
     "Next.js": { icon: "icon-glow-nextjs", text: "text-color-nextjs" },
     TypeScript: { icon: "icon-glow-typescript", text: "text-color-typescript" },
-    "Styled-Components": {
-      icon: "icon-glow-styledcomponents",
-      text: "text-color-styledcomponents",
-    },
+    Upstash: { icon: "icon-glow-upstash", text: "text-color-upstash" },
   };
 
   return techToClassesMap[name] ?? { icon: "", text: "" };
@@ -59,7 +56,7 @@ const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
   
   const techItems = [
     { icon: "logos:react", name: "React" },
-    { icon: "skill-icons:styledcomponents", name: "Styled-Components" },
+    { icon: "logos:upstash-icon", name: "Upstash" },
     { icon: "/drizzleORMicon.png", name: "DrizzleORM" }, 
     { icon: "devicon:tailwindcss", name: "Tailwind" },
     { icon: "logos:nextjs-icon", name: "Next.js" },
@@ -67,7 +64,6 @@ const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
     { icon: "logos:typescript-icon", name: "TypeScript" },
     { icon: "logos:posthog", name: "PostHog" },
   ];
-
 
   return (
     <div ref={techSectionRef} id="tech" className="flex flex-wrap p-8 md:mx-52 font-pacifico">
