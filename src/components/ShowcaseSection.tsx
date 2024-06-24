@@ -9,10 +9,10 @@ const ShowcaseSection = () => {
 
       <div id="showcase" className="container mx-auto text-center py-8">
         <h2 className="text-2xl md:text-4xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
-          <a target="_blank" href="https://www.nutrifit.dev/" rel="noopener noreferrer">Meal/Excercise Logger Web-App</a>
+          <a target="_blank" href="https://gpa-eosin.vercel.app/" rel="noopener noreferrer">Gym Progress App , track macros and sets *mobile friendly*</a>
         </h2>
         <h2 className="text-sm md:text-2xl font-bold text-blue-400 mb-4 italic tracking-widest">
-          (TypeScript, Next.js, React, Prisma, PlanetScale, Trpc, Shadcn, Tailwind.css, Clerk)
+          (TypeScript, Next 14, React, PostgreSQL , Drizzle,  Shadcn, Tailwind.css, Clerk)
         </h2>
         <h2 className="text-2xl md:text-4xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
           <a target="_blank" href="https://github.com/boshma/FitnessAppKotlin" rel="noopener noreferrer">Meal/Excercise Logger Mobile</a>

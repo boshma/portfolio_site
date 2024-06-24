@@ -97,7 +97,7 @@ const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
                 <img
                   src={item.icon}
                   alt={item.name}
-                  className={`h-14 w-auto lg:h-34 lg:w-auto drizzle-icon`} 
+                  // className={`h-20 w-auto lg:h-34 lg:w-auto drizzle-icon`} 
                 />
               ) : (
                 <Icon
