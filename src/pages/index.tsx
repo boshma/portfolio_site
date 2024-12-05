@@ -99,7 +99,7 @@ const Home = () => {
   useEffect(() => {
     // Update the document height on mount and when window is resized
     const updateHeight = () => {
-      setDocumentHeight(document.documentElement.scrollHeight);
+      setDocumentHeight(Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, window.innerHeight));
     };
 
     window.addEventListener("resize", updateHeight);
