@@ -2,18 +2,18 @@ import { Icon } from "@iconify/react";
 import React, { useEffect, useState } from "react";
 
 const getTechClasses = (name: string) => {
-  const techToClassesMap: Record<string, { icon: string; text: string }> = {
-    Tailwind: { icon: "icon-glow-blue", text: "text-color-blue" },
-    React: { icon: "icon-glow-react", text: "text-color-react" },
-    Sentry: { icon: "icon-color-white", text: "text-color-white" },
-    PostHog: { icon: "icon-glow-posthog", text: "text-color-posthog" },
-    DrizzleORM: { icon: "icon-glow-drizzleorm", text: "text-color-drizzleorm" },
-    "Next.js": { icon: "icon-glow-nextjs", text: "text-color-nextjs" },
-    TypeScript: { icon: "icon-glow-typescript", text: "text-color-typescript" },
-    Upstash: { icon: "icon-glow-upstash", text: "text-color-upstash" },
+  const techToClassesMap: Record<string, { icon: string }> = {
+    Tailwind: { icon: "icon-glow-blue" },
+    React: { icon: "icon-glow-react" },
+    "Spring Boot": { icon: "logos:spring-icon" }, // Updated entry
+    PostHog: { icon: "icon-glow-posthog" },
+    DrizzleORM: { icon: "icon-glow-drizzleorm" },
+    "Next.js": { icon: "icon-glow-nextjs" },
+    TypeScript: { icon: "icon-glow-typescript" },
+    Upstash: { icon: "icon-glow-upstash" },
   };
 
-  return techToClassesMap[name] ?? { icon: "", text: "" };
+  return techToClassesMap[name] ?? { icon: "" };
 };
 
 interface TechSectionProps {
@@ -53,25 +53,29 @@ const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
       }
     };
   }, []);
-  
+
   const techItems = [
     { icon: "logos:react", name: "React" },
     { icon: "logos:upstash-icon", name: "Upstash" },
-    { icon: "/drizzleORMicon.png", name: "DrizzleORM" }, 
+    { icon: "/drizzleORMicon.png", name: "DrizzleORM" },
     { icon: "devicon:tailwindcss", name: "Tailwind" },
     { icon: "logos:nextjs-icon", name: "Next.js" },
-    { icon: "simple-icons:sentry", name: "Sentry" },
+    { icon: "logos:spring-icon", name: "Spring Boot" }, 
     { icon: "logos:typescript-icon", name: "TypeScript" },
     { icon: "logos:posthog", name: "PostHog" },
   ];
 
   return (
-    <div ref={techSectionRef} id="tech" className="flex flex-wrap p-8 md:mx-52 font-pacifico">
-      <h2 className="mb-8 w-full text-center text-4xl font-bold italic tracking-widest text-blue-600">
+    <div
+      ref={techSectionRef}
+      id="tech"
+      className="flex flex-wrap p-8 md:mx-52 font-pacifico"
+    >
+      <h2 className="mb-8 w-full text-center text-4xl font-bold italic tracking-widest text-white">
         My fav tech
       </h2>
       {techItems.map((item, index) => {
-        const { icon: iconClass, text: textClass } = getTechClasses(item.name);
+        const { icon: iconClass } = getTechClasses(item.name);
         return (
           <div
             key={index}
@@ -93,7 +97,7 @@ const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
                 <img
                   src={item.icon}
                   alt={item.name}
-                  // className={`h-20 w-auto lg:h-34 lg:w-auto drizzle-icon`} 
+                  // className={`h-20 w-auto lg:h-34 lg:w-auto drizzle-icon`}
                 />
               ) : (
                 <Icon
@@ -102,9 +106,7 @@ const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
                 />
               )}
             </div>
-            <p
-              className={`mt-2 h-[25px] text-center text-xs font-semibold leading-snug sm:text-lg lg:h-[50px] lg:text-xl ${textClass}`}
-            >
+            <p className="mt-2 h-[25px] text-center text-xs font-semibold leading-snug text-white sm:text-lg lg:h-[50px] lg:text-xl">
               {item.name}
             </p>
           </div>

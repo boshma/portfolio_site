@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import type { FunctionComponent } from "react";
 import ChristmasLights from "./ChristmasLights";
 
-const textList = ['typescript', 'walks', 'cooking', 'coffee'];
+const textList = ['typescript', 'spring boot', 'walks', 'cooking', 'coffee'];
 
 interface TypingTextProps {
   className?: string;

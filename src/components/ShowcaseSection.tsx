@@ -1,62 +1,74 @@
-// src/components/ShowcaseSection.tsx
-import React from 'react';
-import ChristmasLights from './ChristmasLights';
+import React from "react";
+import ChristmasLights from "./ChristmasLights";
 
 const ShowcaseSection = () => {
+  // Showcase items data
+  const showcaseItems = [
+    {
+      title: "Gym Progress App, track macros and sets *mobile friendly*",
+      description:
+        "(TypeScript, Next 14, React, PostgreSQL, Drizzle, Shadcn, Tailwind.css, Clerk)",
+      link: "https://gpa-eosin.vercel.app/",
+    },
+    {
+      title: "Meal/Exercise Logger Mobile",
+      description: "(Kotlin, BCrypt, Room)",
+      link: "https://github.com/boshma/FitnessAppKotlin",
+    },
+    {
+      title: "Discord Clone",
+      description: "(Django, Python, JavaScript, CSS, sqlite3)",
+      link: "https://github.com/boshma/FitnessCommunity",
+    },
+    {
+      title: "Checkers!",
+      description: "(Kotlin, Room)",
+      link: "https://github.com/boshma/Checkers-Kotlin-",
+    },
+    {
+      title: "APOD - astronomy pic of the day",
+      description: "(Kotlin, Glide, APOD API)",
+      link: "https://github.com/boshma/APOD-kotlin-",
+    },
+    {
+      title: "Certifications",
+      description: "Microsoft Azure Fundamentals AZ-900 (link to results)",
+      link: "https://learn.microsoft.com/api/credentials/share/en-us/ShmatBogdanValeriyevich-1496/3DFC01CA70D7A3D1?sharingId=EBCE04780037F3DD",
+    },
+  ];
+
   return (
     <>
-      <h2 className="mb-8 text-center text-4xl font-bold italic tracking-widest text-blue-600 icon-glow-planetscale ">Showcase</h2>
-
-      <div id="showcase" className="container mx-auto text-center py-8">
-        <h2 className="text-2xl md:text-4xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
-          <a target="_blank" href="https://gpa-eosin.vercel.app/" rel="noopener noreferrer">Gym Progress App , track macros and sets *mobile friendly*</a>
-        </h2>
-        <h2 className="text-sm md:text-2xl font-bold text-blue-400 mb-4 italic tracking-widest">
-          (TypeScript, Next 14, React, PostgreSQL , Drizzle,  Shadcn, Tailwind.css, Clerk)
-        </h2>
-        <h2 className="text-2xl md:text-4xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
-          <a target="_blank" href="https://github.com/boshma/FitnessAppKotlin" rel="noopener noreferrer">Meal/Excercise Logger Mobile</a>
-        </h2>
-        <h2 className="text-sm md:text-2xl font-bold text-blue-400 mb-4 italic tracking-widest">
-          (Kotlin, BCrypt, Room)
-        </h2>
-        <h2 className="text-2xl md:text-4xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
-        <a target="_blank" href="https://github.com/boshma/FitnessCommunity" rel="noopener noreferrer">Discord Clone</a>
-      </h2>
-      <h2 className="text-sm md:text-2xl font-bold text-blue-400 mb-4 italic tracking-widest">
-        (Django, Python, JavaScript, CSS, sqlite3)
+      {/* Title */}
+      <h2 className="mb-8 text-center text-4xl font-bold italic tracking-widest text-white">
+        Showcase
       </h2>
 
-      <h2 className="text-2xl md:text-4xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
-        <a target="_blank" href="https://github.com/boshma/Checkers-Kotlin-" rel="noopener noreferrer">Checkers!</a>
-      </h2>
-      <h2 className="text-sm md:text-2xl font-bold text-blue-400 mb-4 italic tracking-widest">
-        (Kotlin, Room)
-      </h2>
-
-      <h2 className="text-2xl md:text-4xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
-        <a target="_blank" href="https://github.com/boshma/APOD-kotlin-" rel="noopener noreferrer">APOD - astronomy pic of the day</a>
-      </h2>
-      <h2 className="text-sm md:text-2xl font-bold text-blue-400 mb-4 italic tracking-widest">
-        (Kotlin, Glide, APOD API)
-      </h2>      
-      <h2 className="text-2xl md:text-4xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
-      </h2>
-      <h2 className="text-sm md:text-2xl font-bold text-blue-400 mb-4 italic tracking-widest">
-        (Java, JavaFX)
-      </h2>
-      <h2 className="text-2xl md:text-4xl font-bold text-blue-600 mb-4 italic tracking-widest icon-glow-planetscale font-pacifico">
-       Certifications
-      </h2>
-      <h2 className="text-sm md:text-2xl font-bold text-blue-400 mb-4 italic tracking-widest">
-      <a target="_blank" href="https://learn.microsoft.com/api/credentials/share/en-us/ShmatBogdanValeriyevich-1496/3DFC01CA70D7A3D1?sharingId=EBCE04780037F3DD
-" rel="noopener noreferrer">Microsoft Azure Fundamentals AZ-900 (link to results)</a>
-      </h2>
-
-    </div>
+      {/* Cards Container */}
+      <div id="showcase" className="container mx-auto flex flex-wrap justify-center gap-8 py-8 text-white">
+        {showcaseItems.map((item, index) => (
+          <div
+            key={index}
+            className="w-full max-w-md rounded-lg border border-gray-700 bg-gray-800 p-6 shadow-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            {/* Card Title */}
+            <h3 className="text-2xl font-bold mb-4 italic tracking-wider">
+              <a
+                target="_blank"
+                href={item.link}
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                {item.title}
+              </a>
+            </h3>
+            {/* Card Description */}
+            <p className="text-sm md:text-lg font-light">{item.description}</p>
+          </div>
+        ))}
+      </div>
     </>
   );
 };
 
 export default ShowcaseSection;
-

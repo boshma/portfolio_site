@@ -7,7 +7,7 @@ import NavBar from "./NavBar";
 const HeaderSection = ({ hasNavBar }: { hasNavBar: boolean }) => {
   const headerRef = useRef<HTMLDivElement>(null);
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
-  
+
   useEffect(() => {
     setWindowWidth(window.innerWidth);
 
@@ -37,9 +37,10 @@ const HeaderSection = ({ hasNavBar }: { hasNavBar: boolean }) => {
             style={windowWidth && windowWidth <= 640 ? { top: "30%" } : {}}
             className="absolute z-20 w-full text-center"
           >
-              <h1 className="header-title text-gray-100">
+            {/* Updated h1 styling */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold text-gray-100">
               Hey, I&apos;m Bogdan
-              </h1>
+            </h1>
             <div className="mt-4 flex items-center justify-center">
               <h2 className="mr-2 text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl text-gray-100">
                 I
