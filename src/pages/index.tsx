@@ -128,7 +128,7 @@ const Home = () => {
       <HeaderSection hasNavBar={hasStoppedScrolling && !isScrolledPastHeader} />
       <div className="h-1 bg-white"></div>
       <div className="relative">
-        {/* <Snow documentHeight={documentHeight} /> */} 
+        <Snow documentHeight={documentHeight} /> 
         <div id="tech">
           <TechSection className="miasmic-blur " />
         </div>
