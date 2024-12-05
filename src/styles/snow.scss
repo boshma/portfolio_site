@@ -17,6 +17,17 @@ body {
   @return $random_range;
 }
 
+.snowfall-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevent overflow from snowflakes */
+  pointer-events: none; /* Ensure it doesn't interfere with user interactions */
+  z-index: -1; /* Keep it behind other elements */
+}
+
 .snow {
   $total: 200;
   position: absolute;

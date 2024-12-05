@@ -11,18 +11,19 @@ const Snow: React.FC<SnowProps> = ({ documentHeight }) => {
   } as React.CSSProperties;
 
   // Memoize the snowflake elements
-  const snowflakes = useMemo(() => (
-    Array.from({ length: 200 }, (_, index) => (
-      <div key={index} className={`snow snow-${index + 1}`}></div>
-    ))
-  ), []); // Empty dependency array as the snowflakes do not depend on any external variables
+  const snowflakes = useMemo(
+    () =>
+      Array.from({ length: 200 }, (_, index) => (
+        <div key={index} className={`snow snow-${index + 1}`}></div>
+      )),
+    [] // Empty dependency array as the snowflakes do not depend on any external variables
+  );
 
   return (
-    <div style={snowStyles}>
+    <div className="snowfall-wrapper overflow-hidden" style={snowStyles}>
       {snowflakes}
     </div>
   );
 };
 
 export default Snow;
-
