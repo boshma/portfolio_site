@@ -69,7 +69,7 @@ const TechSection: React.FC<TechSectionProps> = ({ className = "" }) => {
     <div
       ref={techSectionRef}
       id="tech"
-      className="flex flex-wrap p-8 md:mx-52 font-pacifico"
+      className="flex flex-wrap p-8 md:mx-52"
     >
       <h2 className="mb-8 w-full text-center text-4xl font-bold italic tracking-widest text-white">
         My fav tech
