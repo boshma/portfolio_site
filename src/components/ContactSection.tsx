@@ -7,7 +7,7 @@ const ContactSection: React.FC = () => {
   return (
     <div
       id="contact"
-      className="container mx-auto text-center py-12 text-white font-pacifico"
+      className="container mx-auto text-center py-12 text-white"
     >
       {/* Title */}
       <h2 className="text-4xl font-bold mb-12 italic tracking-widest underline decoration-wavy decoration-blue-500">

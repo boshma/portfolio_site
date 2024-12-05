@@ -16,7 +16,7 @@ const ExperienceSection = () => {
   const listItems = [
     "Food: Ice Cream",
     "Show: Vikings",
-    "Anime: One Piece", 
+    "Anime: One Piece",
     "Book: Harry Potter series",
     "Pet: Cat",
     "Movie: Talladega Nights",
@@ -26,14 +26,14 @@ const ExperienceSection = () => {
   ];
 
   const [ref, inView] = useInView({
-    triggerOnce: false, // Animations trigger every time the element enters/leaves the viewport
-    threshold: 0.1, // Adjust as needed: 0.1 means 10% of the element is visible
+    triggerOnce: false,
+    threshold: 0.1,
   });
 
   return (
     <div
       id="experience"
-      className="container mx-auto py-16 px-4 text-center font-pacifico text-white"
+      className="container mx-auto py-16 px-4 text-center font-sans text-white"
     >
       {/* Section Title */}
       <h2 className="mb-12 text-4xl font-bold italic tracking-widest underline decoration-wavy decoration-blue-500">

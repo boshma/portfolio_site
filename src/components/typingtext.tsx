@@ -1,9 +1,7 @@
-//src/components/typingtext.tsx
 import React, { useEffect, useState } from "react";
 import type { FunctionComponent } from "react";
-import ChristmasLights from "./ChristmasLights";
 
-const textList = ['typescript', 'spring boot', 'walks', 'cooking', 'coffee'];
+const textList = ["typescript", "spring boot", "walks", "cooking", "coffee"];
 
 interface TypingTextProps {
   className?: string;
@@ -18,7 +16,7 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
   useEffect(() => {
     if (paused) return;
     const timer = setTimeout(() => {
-      const currentText = textList[idx] ?? '';
+      const currentText = textList[idx] ?? "";
       if (direction) {
         if (text.length === currentText.length) {
           setPaused(true);
@@ -42,7 +40,9 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
   }, [text, idx, direction, paused]);
 
   return (
-    <h2 className={`font-pacifico text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-5xl leading-normal overflow-visible border-white whitespace-nowrap animate-blink-caret text-gray-100 ${className}`}>
+    <h2
+      className={`text-2xl sm:text-3xl leading-normal overflow-visible border-white whitespace-nowrap animate-blink-caret text-gray-100 font-sans ${className}`}
+    >
       <div className="inline-block relative">{text}</div>
       <span className="animate-blink inline-block w-4 h-full bg-white">|</span>
     </h2>
