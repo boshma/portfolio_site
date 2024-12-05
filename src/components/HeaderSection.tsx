@@ -37,8 +37,8 @@ const HeaderSection = ({ hasNavBar }: { hasNavBar: boolean }) => {
             style={windowWidth && windowWidth <= 640 ? { top: "30%" } : {}}
             className="absolute z-20 w-full text-center"
           >
-            {/* Updated h1 styling */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-bold text-gray-100">
+
+            <h1 className="text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-sans font-bold text-gray-100">
               Hey, I&apos;m Bogdan
             </h1>
             <div className="mt-4 flex items-center justify-center">
