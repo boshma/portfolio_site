@@ -41,10 +41,10 @@ const TypingText: FunctionComponent<TypingTextProps> = ({ className }) => {
 
   return (
     <h2
-      className={`text-2xl sm:text-3xl leading-normal overflow-visible border-white whitespace-nowrap animate-blink-caret text-gray-100 font-sans ${className}`}
+      className={`text-xl sm:text-2xl leading-snug overflow-visible border-white whitespace-nowrap animate-blink-caret text-gray-100 font-sans ${className}`}
     >
       <div className="inline-block relative">{text}</div>
-      <span className="animate-blink inline-block w-4 h-full bg-white">|</span>
+      <span className="animate-blink inline-block w-2 h-full bg-white">|</span>
     </h2>
   );
 };

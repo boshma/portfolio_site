@@ -42,10 +42,10 @@ const HeaderSection = ({ hasNavBar }: { hasNavBar: boolean }) => {
               Hey, I&apos;m Bogdan
             </h1>
             <div className="mt-4 flex items-center justify-center">
-              <h2 className="mr-2 text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl text-gray-100">
+              <h2 className="text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl 2xl:text-2.5xl mr-2">
                 I
               </h2>
-              <HeartSVG className="mr-3 h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-10 lg:w-10 xl:h-10 xl:w-10 2xl:h-12 2xl:w-12" />
+              <HeartSVG className="mr-3 ml-2 h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-10 lg:w-10 xl:h-10 xl:w-10 2xl:h-12 2xl:w-12" />
               <TypingText className="z-10" />
             </div>
           </div>
