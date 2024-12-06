@@ -31,7 +31,7 @@ const ShowcaseSection = () => {
       link: "https://github.com/boshma/APOD-kotlin-",
     },
     {
-      title: "Certifications",
+      title: "Microsoft Cloud Cert",
       description: "Microsoft Azure Fundamentals AZ-900 (link to results)",
       link: "https://learn.microsoft.com/api/credentials/share/en-us/ShmatBogdanValeriyevich-1496/3DFC01CA70D7A3D1?sharingId=EBCE04780037F3DD",
     },
