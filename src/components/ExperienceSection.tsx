@@ -17,14 +17,13 @@ const ExperienceSection = () => {
 
   const listItems = [
     "Food: Ice Cream",
-    "Show: Vikings",
+    "Show: The Strain",
     "Anime: One Piece",
     "Book: Harry Potter series",
     "Pet: Cat",
-    "Movie: Talladega Nights",
+    "Movie: Dodgeball",
     "FE Language: TypeScript",
     "BE Language: Java",
-    "Artist: Armin Van Buuren",
   ];
 
   const [ref, inView] = useInView({
