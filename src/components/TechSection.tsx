@@ -5,7 +5,7 @@ const getTechClasses = (name: string) => {
   const techToClassesMap: Record<string, { icon: string }> = {
     Tailwind: { icon: "icon-glow-blue" },
     React: { icon: "icon-glow-react" },
-    "Spring Boot": { icon: "logos:spring-icon" }, // Updated entry
+    "Spring Boot": { icon: "logos:spring-icon" }, 
     PostHog: { icon: "icon-glow-posthog" },
     DrizzleORM: { icon: "icon-glow-drizzleorm" },
     "Next.js": { icon: "icon-glow-nextjs" },

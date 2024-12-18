@@ -133,7 +133,6 @@ const ParticlesComponent = (/** @type {{ id: string | undefined; }} */ props) =>
     };
   }, []);
   
-  // useCallback is not mandatory, but it's recommended since this callback can be memoized if static
   const particlesInit = useCallback(async (/** @type {import("tsparticles-engine").Engine} */ engine) => {
     await loadFull(engine);
   }, []);

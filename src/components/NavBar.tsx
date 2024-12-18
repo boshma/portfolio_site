@@ -12,9 +12,8 @@ const NavBar = ({ navBottom, visible }: { navBottom: boolean, visible: boolean }
     color: 'white',
     opacity: visible ? 1 : 0,
     visibility: visible ? 'visible' : 'hidden',
-    // Use maxHeight for transition instead of height to accommodate variable content height
-    maxHeight: visible ? '100px' : '0', // Adjust 'px' as needed
-    overflow: 'hidden', // Prevent content overflow during transition
+    maxHeight: visible ? '100px' : '0', 
+    overflow: 'hidden', 
     transition: 'opacity 500ms ease-in-out, visibility 500ms ease-in-out, maxHeight 500ms ease-in-out',
   };
 

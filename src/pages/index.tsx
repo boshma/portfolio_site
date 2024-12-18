@@ -15,8 +15,8 @@ const Home = () => {
   const [isScrolledPastHeader, setIsScrolledPastHeader] = useState(false);
   const [hasStoppedScrolling, setHasStoppedScrolling] = useState(true);
 
-  // Header section height (update with actual height of your header)
-  const headerHeight = 800; // Example height in pixels
+  // Header section height 
+  const headerHeight = 800; 
 
   useEffect(() => {
     let scrollTimeout: NodeJS.Timeout;
