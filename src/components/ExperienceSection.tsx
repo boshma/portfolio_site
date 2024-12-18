@@ -22,6 +22,7 @@ const ExperienceSection = () => {
     "Book: Harry Potter series",
     "Pet: Cat",
     "Movie: Dodgeball",
+    "Gamee: Halo 2",
     "FE Language: TypeScript",
     "BE Language: Java",
   ];
